@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/bestWindsurfersWeatherForecast
+
+logging:
+  level:
+    root: INFO
+
+app:
+  weatherbit:
+    api_key: "test_key"

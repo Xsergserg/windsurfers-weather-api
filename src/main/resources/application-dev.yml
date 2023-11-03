@@ -1,0 +1,10 @@
+server:
+  port: 8000
+  servlet:
+    context-path: ""
+
+logging:
+  level:
+    windsurfers-weather-api: DEBUG
+  file:
+    path: logs/
