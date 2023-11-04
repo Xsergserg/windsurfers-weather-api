@@ -1,16 +1,16 @@
 package windsurfersweatherapi.model;
 
-import java.util.Date;
+import java.time.LocalDate;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import windsurfersweatherapi.enums.Location;
 
 /**
  * Weather forecast model.
  */
 @Data
+@AllArgsConstructor
 public class WeatherForecast {
-  Date date;
-  Location location;
-  Double averageTemperature;
-  Double averageWindSpeed;
+  LocalDate date;
+  LocationData locationData;
+  WeatherData weatherData;
 }

@@ -1,18 +1,18 @@
 package windsurfersweatherapi.dto;
 
-import java.util.Date;
-import java.util.Map;
+import java.time.LocalDate;
 import lombok.Data;
 import windsurfersweatherapi.model.Coordinates;
+import windsurfersweatherapi.model.WeatherData;
 
 /**
  * Data transfer forecast object for controller.
  */
 @Data
 public class ForecastDto {
-  Date date;
+  LocalDate date;
   String city;
   String country;
   Coordinates coordinates;
-  Map<String, Double> weatherConditions;
+  WeatherData weatherData;
 }
