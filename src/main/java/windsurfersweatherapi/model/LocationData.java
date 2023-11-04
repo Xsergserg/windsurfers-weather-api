@@ -1,13 +1,11 @@
 package windsurfersweatherapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
 /**
  * Class contains location data.
  */
-@AllArgsConstructor
-@Getter
+@Data
 public class LocationData {
   final String city;
   final String countryCode;

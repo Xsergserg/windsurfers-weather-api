@@ -1,14 +1,12 @@
 package windsurfersweatherapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
 /**
  * Class contains weather data.
  */
-@AllArgsConstructor
-@Getter
+@Data
 public class WeatherData {
-  Double averageTemperature;
-  Double averageWindSpeed;
+  final Double averageTemperature;
+  final Double averageWindSpeed;
 }

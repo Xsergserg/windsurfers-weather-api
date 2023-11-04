@@ -1,13 +1,11 @@
 package windsurfersweatherapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
 /**
  * Simple class contains longitude and latitude values.
  */
-@AllArgsConstructor
-@Getter
+@Data
 public class Coordinates {
   final Double longitude;
   final Double latitude;
