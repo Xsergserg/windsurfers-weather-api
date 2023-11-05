@@ -9,4 +9,5 @@ logging:
 
 app:
   weatherbit:
-    api_key: "test_key"
+    api_key: REPLACE_WITH_YOUR_KEY
+    url: https://api.weatherbit.io/v2.0/forecast/daily
