@@ -7,6 +7,7 @@ import lombok.Data;
  */
 @Data
 public class WeatherData {
+
   final Double averageTemperature;
   final Double averageWindSpeed;
 }

@@ -7,6 +7,7 @@ import lombok.Data;
  */
 @Data
 public class LocationData {
+
   final String city;
   final String countryCode;
   final Coordinates coordinates;

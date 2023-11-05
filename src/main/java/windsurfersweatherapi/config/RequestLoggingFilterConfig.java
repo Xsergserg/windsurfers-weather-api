@@ -9,6 +9,7 @@ import org.springframework.web.filter.CommonsRequestLoggingFilter;
  */
 @Configuration
 public class RequestLoggingFilterConfig {
+
   /**
    * Filter properties setting.
    *

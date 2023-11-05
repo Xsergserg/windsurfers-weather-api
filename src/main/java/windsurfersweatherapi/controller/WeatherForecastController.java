@@ -12,6 +12,7 @@ import windsurfersweatherapi.service.WeatherForecastService;
  */
 @RestController
 public class WeatherForecastController {
+
   private final WeatherForecastService weatherForecastService;
   private final ObjectMapper objectMapper;
 

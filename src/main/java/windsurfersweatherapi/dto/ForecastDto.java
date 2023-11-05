@@ -10,6 +10,7 @@ import windsurfersweatherapi.model.WeatherData;
  */
 @Data
 public class ForecastDto {
+
   LocalDate date;
   String city;
   String country;

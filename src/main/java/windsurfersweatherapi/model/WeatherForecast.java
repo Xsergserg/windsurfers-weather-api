@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class WeatherForecast {
+
   LocalDate date;
   LocationData locationData;
   WeatherData weatherData;
