@@ -3,49 +3,31 @@ package windsurfersweatherapi.controller;
 import static org.assertj.core.api.Assertions.from;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static windsurfersweatherapi.factory.WeatherBitForecastResponseFactory.bridgetownWeatherBitForecastFullResponse;
-import static windsurfersweatherapi.factory.WeatherBitForecastResponseFactory.pissouriWeatherBitForecastFullResponse;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.time.Clock;
 import java.time.LocalDate;
-import java.time.ZoneOffset;
-import java.util.List;
-import okhttp3.mockwebserver.MockResponse;
-import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.reactive.function.client.WebClient;
-import windsurfersweatherapi.client.WeatherBitForecastApiClient;
-import windsurfersweatherapi.client.WebClientFabric;
 import windsurfersweatherapi.controller.validator.WeatherForecastControllerValidator;
-import windsurfersweatherapi.enums.Location;
 import windsurfersweatherapi.exception.CustomRetryExhaustedException;
 import windsurfersweatherapi.exception.ValidationException;
 import windsurfersweatherapi.exception.WeatherForecastControllerExceptionHandler;
-import windsurfersweatherapi.factory.WeatherBitForecastResponseFactory;
 import windsurfersweatherapi.mapper.WeatherForecastDtoMapper;
 import windsurfersweatherapi.service.WeatherForecastService;
 
@@ -78,7 +60,7 @@ public class WeatherForecastControllerTest {
   class StatusCode {
 
     private MockMvc mockMvc;
-    private WeatherForecastControllerValidator validator =
+    private final WeatherForecastControllerValidator validator =
         mock(WeatherForecastControllerValidator.class);
 
     @BeforeEach
