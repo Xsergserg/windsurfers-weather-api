@@ -14,8 +14,8 @@ public class WeatherBitForecastApiServerException extends RuntimeException {
    * Base constructor.
    */
   public WeatherBitForecastApiServerException(int statusCode) {
-    super(String.format("WeatherBitForecastApi responses with server error. Status code: '%d'",
-        statusCode));
+    super(String.format("WeatherBitForecastApi responses with server reasonPhrase. "
+        + "External service statusCode code: '%d'. Try to repeat request later", statusCode));
     this.statusCode = statusCode;
   }
 }

@@ -6,7 +6,7 @@ package windsurfersweatherapi.exception;
 public class WeatherBitForecastApiClientException extends RuntimeException {
 
   public WeatherBitForecastApiClientException(int statusCode) {
-    super(String.format("WeatherBitForecastApi respond with client error. Status code: '%d'",
-        statusCode));
+    super(String.format("WeatherBitForecastApi respond with client exception. "
+        + "External service statusCode code: '%d'", statusCode));
   }
 }
