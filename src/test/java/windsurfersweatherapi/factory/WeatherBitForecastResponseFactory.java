@@ -3,820 +3,1540 @@ package windsurfersweatherapi.factory;
 public class WeatherBitForecastResponseFactory {
 
   public static String pissouriWeatherBitForecastFullResponse() {
-    return "{\n"
-        + "  \"city_name\": \"Pissouri\",\n"
-        + "  \"country_code\": \"CY\",\n"
-        + "  \"data\": [\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 25,\n"
-        + "      \"app_min_temp\": 17.5,\n"
-        + "      \"clouds\": 6,\n"
-        + "      \"clouds_hi\": 13,\n"
-        + "      \"clouds_low\": 2,\n"
-        + "      \"clouds_mid\": 5,\n"
-        + "      \"datetime\": \"2023-11-05\",\n"
-        + "      \"dewpt\": 15,\n"
-        + "      \"high_temp\": 25.1,\n"
-        + "      \"low_temp\": 18.8,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 25.1,\n"
-        + "      \"min_temp\": 17.5,\n"
-        + "      \"moon_phase\": 0.394735,\n"
-        + "      \"moon_phase_lunation\": 0.75,\n"
-        + "      \"moonrise_ts\": 1699219563,\n"
-        + "      \"moonset_ts\": 1699184177,\n"
-        + "      \"ozone\": 270.2,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 987.8,\n"
-        + "      \"rh\": 72,\n"
-        + "      \"slp\": 1015.5,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699157593,\n"
-        + "      \"sunset_ts\": 1699195959,\n"
-        + "      \"temp\": 20.9,\n"
-        + "      \"ts\": 1699135260,\n"
-        + "      \"uv\": 3.1,\n"
-        + "      \"valid_date\": \"2023-11-05\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"ESE\",\n"
-        + "      \"wind_cdir_full\": \"east-southeast\",\n"
-        + "      \"wind_dir\": 123,\n"
-        + "      \"wind_gust_spd\": 4.6,\n"
-        + "      \"wind_spd\": 2\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 25.3,\n"
-        + "      \"app_min_temp\": 18.2,\n"
-        + "      \"clouds\": 0,\n"
-        + "      \"clouds_hi\": 0,\n"
-        + "      \"clouds_low\": 18,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-06\",\n"
-        + "      \"dewpt\": 14.8,\n"
-        + "      \"high_temp\": 25.1,\n"
-        + "      \"low_temp\": 18.7,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 25.1,\n"
-        + "      \"min_temp\": 18.8,\n"
-        + "      \"moon_phase\": 0.303291,\n"
-        + "      \"moon_phase_lunation\": 0.78,\n"
-        + "      \"moonrise_ts\": 1699223052,\n"
-        + "      \"moonset_ts\": 1699272165,\n"
-        + "      \"ozone\": 259.6,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 989.4,\n"
-        + "      \"rh\": 68,\n"
-        + "      \"slp\": 1017.3,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699244049,\n"
-        + "      \"sunset_ts\": 1699282309,\n"
-        + "      \"temp\": 21.5,\n"
-        + "      \"ts\": 1699221660,\n"
-        + "      \"uv\": 4.5,\n"
-        + "      \"valid_date\": \"2023-11-06\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c01d\",\n"
-        + "        \"code\": 800,\n"
-        + "        \"description\": \"Clear Sky\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"W\",\n"
-        + "      \"wind_cdir_full\": \"west\",\n"
-        + "      \"wind_dir\": 270,\n"
-        + "      \"wind_gust_spd\": 7.3,\n"
-        + "      \"wind_spd\": 3.3\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 25,\n"
-        + "      \"app_min_temp\": 18.7,\n"
-        + "      \"clouds\": 2,\n"
-        + "      \"clouds_hi\": 0,\n"
-        + "      \"clouds_low\": 22,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-07\",\n"
-        + "      \"dewpt\": 16,\n"
-        + "      \"high_temp\": 25,\n"
-        + "      \"low_temp\": 18.4,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 25,\n"
-        + "      \"min_temp\": 18.7,\n"
-        + "      \"moon_phase\": 0.218722,\n"
-        + "      \"moon_phase_lunation\": 0.82,\n"
-        + "      \"moonrise_ts\": 1699312866,\n"
-        + "      \"moonset_ts\": 1699360022,\n"
-        + "      \"ozone\": 256.1,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 991.6,\n"
-        + "      \"rh\": 74,\n"
-        + "      \"slp\": 1019.5,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699330505,\n"
-        + "      \"sunset_ts\": 1699368659,\n"
-        + "      \"temp\": 21.4,\n"
-        + "      \"ts\": 1699308060,\n"
-        + "      \"uv\": 4.1,\n"
-        + "      \"valid_date\": \"2023-11-07\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"S\",\n"
-        + "      \"wind_cdir_full\": \"south\",\n"
-        + "      \"wind_dir\": 185,\n"
-        + "      \"wind_gust_spd\": 5.8,\n"
-        + "      \"wind_spd\": 2.4\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 24.4,\n"
-        + "      \"app_min_temp\": 16.8,\n"
-        + "      \"clouds\": 1,\n"
-        + "      \"clouds_hi\": 2,\n"
-        + "      \"clouds_low\": 12,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-08\",\n"
-        + "      \"dewpt\": 15.3,\n"
-        + "      \"high_temp\": 24.3,\n"
-        + "      \"low_temp\": 15.1,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 24.3,\n"
-        + "      \"min_temp\": 16.8,\n"
-        + "      \"moon_phase\": 0.143755,\n"
-        + "      \"moon_phase_lunation\": 0.85,\n"
-        + "      \"moonrise_ts\": 1699399266,\n"
-        + "      \"moonset_ts\": 1699447824,\n"
-        + "      \"ozone\": 260.6,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 985.9,\n"
-        + "      \"rh\": 75,\n"
-        + "      \"slp\": 1004.4,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699416962,\n"
-        + "      \"sunset_ts\": 1699455012,\n"
-        + "      \"temp\": 20.3,\n"
-        + "      \"ts\": 1699394460,\n"
-        + "      \"uv\": 4.4,\n"
-        + "      \"valid_date\": \"2023-11-08\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c01d\",\n"
-        + "        \"code\": 800,\n"
-        + "        \"description\": \"Clear Sky\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SE\",\n"
-        + "      \"wind_cdir_full\": \"southeast\",\n"
-        + "      \"wind_dir\": 142,\n"
-        + "      \"wind_gust_spd\": 3.2,\n"
-        + "      \"wind_spd\": 1.9\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 23.2,\n"
-        + "      \"app_min_temp\": 15.1,\n"
-        + "      \"clouds\": 25,\n"
-        + "      \"clouds_hi\": 77,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 11,\n"
-        + "      \"datetime\": \"2023-11-09\",\n"
-        + "      \"dewpt\": 13.1,\n"
-        + "      \"high_temp\": 23.4,\n"
-        + "      \"low_temp\": 16.8,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 23.4,\n"
-        + "      \"min_temp\": 15.1,\n"
-        + "      \"moon_phase\": 0.0813748,\n"
-        + "      \"moon_phase_lunation\": 0.89,\n"
-        + "      \"moonrise_ts\": 1699489046,\n"
-        + "      \"moonset_ts\": 1699535644,\n"
-        + "      \"ozone\": 265.4,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 976.1,\n"
-        + "      \"rh\": 70,\n"
-        + "      \"slp\": 979,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699503418,\n"
-        + "      \"sunset_ts\": 1699541366,\n"
-        + "      \"temp\": 19,\n"
-        + "      \"ts\": 1699480860,\n"
-        + "      \"uv\": 3.6,\n"
-        + "      \"valid_date\": \"2023-11-09\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 802,\n"
-        + "        \"description\": \"Scattered clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SSE\",\n"
-        + "      \"wind_cdir_full\": \"south-southeast\",\n"
-        + "      \"wind_dir\": 158,\n"
-        + "      \"wind_gust_spd\": 1.6,\n"
-        + "      \"wind_spd\": 1.8\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 22.8,\n"
-        + "      \"app_min_temp\": 16.8,\n"
-        + "      \"clouds\": 68,\n"
-        + "      \"clouds_hi\": 100,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 61,\n"
-        + "      \"datetime\": \"2023-11-10\",\n"
-        + "      \"dewpt\": 14.1,\n"
-        + "      \"high_temp\": 23,\n"
-        + "      \"low_temp\": 17.1,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 23,\n"
-        + "      \"min_temp\": 16.8,\n"
-        + "      \"moon_phase\": 0.0347566,\n"
-        + "      \"moon_phase_lunation\": 0.92,\n"
-        + "      \"moonrise_ts\": 1699578851,\n"
-        + "      \"moonset_ts\": 1699623556,\n"
-        + "      \"ozone\": 274.1,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 977.1,\n"
-        + "      \"rh\": 74,\n"
-        + "      \"slp\": 979.9,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699589875,\n"
-        + "      \"sunset_ts\": 1699627721,\n"
-        + "      \"temp\": 19,\n"
-        + "      \"ts\": 1699567260,\n"
-        + "      \"uv\": 4.4,\n"
-        + "      \"valid_date\": \"2023-11-10\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c03d\",\n"
-        + "        \"code\": 803,\n"
-        + "        \"description\": \"Broken clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"E\",\n"
-        + "      \"wind_cdir_full\": \"east\",\n"
-        + "      \"wind_dir\": 101,\n"
-        + "      \"wind_gust_spd\": 1,\n"
-        + "      \"wind_spd\": 1.1\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 23.1,\n"
-        + "      \"app_min_temp\": 17.1,\n"
-        + "      \"clouds\": 35,\n"
-        + "      \"clouds_hi\": 66,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 31,\n"
-        + "      \"datetime\": \"2023-11-11\",\n"
-        + "      \"dewpt\": 11.8,\n"
-        + "      \"high_temp\": 23.7,\n"
-        + "      \"low_temp\": 15.8,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 23.7,\n"
-        + "      \"min_temp\": 17.1,\n"
-        + "      \"moon_phase\": 0.00704502,\n"
-        + "      \"moon_phase_lunation\": 0.95,\n"
-        + "      \"moonrise_ts\": 1699668745,\n"
-        + "      \"moonset_ts\": 1699711647,\n"
-        + "      \"ozone\": 286.6,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 976.2,\n"
-        + "      \"rh\": 63,\n"
-        + "      \"slp\": 979,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699676333,\n"
-        + "      \"sunset_ts\": 1699714079,\n"
-        + "      \"temp\": 19.6,\n"
-        + "      \"ts\": 1699653660,\n"
-        + "      \"uv\": 4.4,\n"
-        + "      \"valid_date\": \"2023-11-11\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 802,\n"
-        + "        \"description\": \"Scattered clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SW\",\n"
-        + "      \"wind_cdir_full\": \"southwest\",\n"
-        + "      \"wind_dir\": 216,\n"
-        + "      \"wind_gust_spd\": 1.2,\n"
-        + "      \"wind_spd\": 1.2\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 22.6,\n"
-        + "      \"app_min_temp\": 15.8,\n"
-        + "      \"clouds\": 11,\n"
-        + "      \"clouds_hi\": 44,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-12\",\n"
-        + "      \"dewpt\": 11.2,\n"
-        + "      \"high_temp\": 23,\n"
-        + "      \"low_temp\": 15.6,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 23,\n"
-        + "      \"min_temp\": 15.8,\n"
-        + "      \"moon_phase\": 0.00101482,\n"
-        + "      \"moon_phase_lunation\": 0.99,\n"
-        + "      \"moonrise_ts\": 1699758787,\n"
-        + "      \"moonset_ts\": 1699800020,\n"
-        + "      \"ozone\": 289.4,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 976.6,\n"
-        + "      \"rh\": 62,\n"
-        + "      \"slp\": 979.4,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699762790,\n"
-        + "      \"sunset_ts\": 1699800437,\n"
-        + "      \"temp\": 18.8,\n"
-        + "      \"ts\": 1699740060,\n"
-        + "      \"uv\": 4.3,\n"
-        + "      \"valid_date\": \"2023-11-12\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SW\",\n"
-        + "      \"wind_cdir_full\": \"southwest\",\n"
-        + "      \"wind_dir\": 232,\n"
-        + "      \"wind_gust_spd\": 2.2,\n"
-        + "      \"wind_spd\": 2.3\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 22.1,\n"
-        + "      \"app_min_temp\": 15.6,\n"
-        + "      \"clouds\": 5,\n"
-        + "      \"clouds_hi\": 22,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-13\",\n"
-        + "      \"dewpt\": 11.6,\n"
-        + "      \"high_temp\": 22.4,\n"
-        + "      \"low_temp\": 15.2,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 22.4,\n"
-        + "      \"min_temp\": 15.6,\n"
-        + "      \"moon_phase\": 0.018674,\n"
-        + "      \"moon_phase_lunation\": 0.02,\n"
-        + "      \"moonrise_ts\": 1699849013,\n"
-        + "      \"moonset_ts\": 1699888792,\n"
-        + "      \"ozone\": 279.3,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 978.8,\n"
-        + "      \"rh\": 66,\n"
-        + "      \"slp\": 981.6,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699849247,\n"
-        + "      \"sunset_ts\": 1699886798,\n"
-        + "      \"temp\": 18.3,\n"
-        + "      \"ts\": 1699826460,\n"
-        + "      \"uv\": 4.3,\n"
-        + "      \"valid_date\": \"2023-11-13\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"S\",\n"
-        + "      \"wind_cdir_full\": \"south\",\n"
-        + "      \"wind_dir\": 183,\n"
-        + "      \"wind_gust_spd\": 1.8,\n"
-        + "      \"wind_spd\": 1.8\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 21.9,\n"
-        + "      \"app_min_temp\": 15.2,\n"
-        + "      \"clouds\": 14,\n"
-        + "      \"clouds_hi\": 57,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-14\",\n"
-        + "      \"dewpt\": 10.5,\n"
-        + "      \"high_temp\": 22.4,\n"
-        + "      \"low_temp\": 15.3,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 22.4,\n"
-        + "      \"min_temp\": 15.2,\n"
-        + "      \"moon_phase\": 0.0608709,\n"
-        + "      \"moon_phase_lunation\": 0.05,\n"
-        + "      \"moonrise_ts\": 1699939404,\n"
-        + "      \"moonset_ts\": 1699978073,\n"
-        + "      \"ozone\": 281.4,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 977,\n"
-        + "      \"rh\": 63,\n"
-        + "      \"slp\": 979.9,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1699935705,\n"
-        + "      \"sunset_ts\": 1699973160,\n"
-        + "      \"temp\": 17.9,\n"
-        + "      \"ts\": 1699912860,\n"
-        + "      \"uv\": 4.2,\n"
-        + "      \"valid_date\": \"2023-11-14\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SSE\",\n"
-        + "      \"wind_cdir_full\": \"south-southeast\",\n"
-        + "      \"wind_dir\": 156,\n"
-        + "      \"wind_gust_spd\": 1.5,\n"
-        + "      \"wind_spd\": 1.7\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 21.9,\n"
-        + "      \"app_min_temp\": 15.3,\n"
-        + "      \"clouds\": 51,\n"
-        + "      \"clouds_hi\": 52,\n"
-        + "      \"clouds_low\": 1,\n"
-        + "      \"clouds_mid\": 50,\n"
-        + "      \"datetime\": \"2023-11-15\",\n"
-        + "      \"dewpt\": 6.4,\n"
-        + "      \"high_temp\": 24.9,\n"
-        + "      \"low_temp\": 14.1,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 24.9,\n"
-        + "      \"min_temp\": 15.3,\n"
-        + "      \"moon_phase\": 0.126937,\n"
-        + "      \"moon_phase_lunation\": 0.09,\n"
-        + "      \"moonrise_ts\": 1700029854,\n"
-        + "      \"moonset_ts\": 1700067912,\n"
-        + "      \"ozone\": 284.5,\n"
-        + "      \"pop\": 0,\n"
-        + "      \"precip\": 0,\n"
-        + "      \"pres\": 972,\n"
-        + "      \"rh\": 45,\n"
-        + "      \"slp\": 974.8,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700022162,\n"
-        + "      \"sunset_ts\": 1700059523,\n"
-        + "      \"temp\": 18.9,\n"
-        + "      \"ts\": 1699999260,\n"
-        + "      \"uv\": 4.2,\n"
-        + "      \"valid_date\": \"2023-11-15\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c03d\",\n"
-        + "        \"code\": 803,\n"
-        + "        \"description\": \"Broken clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"ESE\",\n"
-        + "      \"wind_cdir_full\": \"east-southeast\",\n"
-        + "      \"wind_dir\": 110,\n"
-        + "      \"wind_gust_spd\": 1.5,\n"
-        + "      \"wind_spd\": 2\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 18.1,\n"
-        + "      \"app_min_temp\": 15.7,\n"
-        + "      \"clouds\": 54,\n"
-        + "      \"clouds_hi\": 50,\n"
-        + "      \"clouds_low\": 7,\n"
-        + "      \"clouds_mid\": 50,\n"
-        + "      \"datetime\": \"2023-11-16\",\n"
-        + "      \"dewpt\": 10.4,\n"
-        + "      \"high_temp\": 19.9,\n"
-        + "      \"low_temp\": 14,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 19.9,\n"
-        + "      \"min_temp\": 14.1,\n"
-        + "      \"moon_phase\": 0.214398,\n"
-        + "      \"moon_phase_lunation\": 0.12,\n"
-        + "      \"moonrise_ts\": 1700120170,\n"
-        + "      \"moonset_ts\": 1700158235,\n"
-        + "      \"ozone\": 309.1,\n"
-        + "      \"pop\": 90,\n"
-        + "      \"precip\": 14.125,\n"
-        + "      \"pres\": 969.8,\n"
-        + "      \"rh\": 66,\n"
-        + "      \"slp\": 972.6,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700108620,\n"
-        + "      \"sunset_ts\": 1700145889,\n"
-        + "      \"temp\": 16.9,\n"
-        + "      \"ts\": 1700085660,\n"
-        + "      \"uv\": 4.2,\n"
-        + "      \"valid_date\": \"2023-11-16\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"r02d\",\n"
-        + "        \"code\": 501,\n"
-        + "        \"description\": \"Moderate rain\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SSW\",\n"
-        + "      \"wind_cdir_full\": \"south-southwest\",\n"
-        + "      \"wind_dir\": 212,\n"
-        + "      \"wind_gust_spd\": 6.5,\n"
-        + "      \"wind_spd\": 5.9\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 17.9,\n"
-        + "      \"app_min_temp\": 15.5,\n"
-        + "      \"clouds\": 100,\n"
-        + "      \"clouds_hi\": 100,\n"
-        + "      \"clouds_low\": 51,\n"
-        + "      \"clouds_mid\": 83,\n"
-        + "      \"datetime\": \"2023-11-17\",\n"
-        + "      \"dewpt\": 9.3,\n"
-        + "      \"high_temp\": 20.4,\n"
-        + "      \"low_temp\": 13.9,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 20.4,\n"
-        + "      \"min_temp\": 14,\n"
-        + "      \"moon_phase\": 0.318904,\n"
-        + "      \"moon_phase_lunation\": 0.16,\n"
-        + "      \"moonrise_ts\": 1700210133,\n"
-        + "      \"moonset_ts\": 1700248851,\n"
-        + "      \"ozone\": 279.9,\n"
-        + "      \"pop\": 25,\n"
-        + "      \"precip\": 0.875,\n"
-        + "      \"pres\": 976.3,\n"
-        + "      \"rh\": 61,\n"
-        + "      \"slp\": 979.1,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700195077,\n"
-        + "      \"sunset_ts\": 1700232256,\n"
-        + "      \"temp\": 17,\n"
-        + "      \"ts\": 1700172060,\n"
-        + "      \"uv\": 4.1,\n"
-        + "      \"valid_date\": \"2023-11-17\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c04d\",\n"
-        + "        \"code\": 804,\n"
-        + "        \"description\": \"Overcast clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SW\",\n"
-        + "      \"wind_cdir_full\": \"southwest\",\n"
-        + "      \"wind_dir\": 228,\n"
-        + "      \"wind_gust_spd\": 4.7,\n"
-        + "      \"wind_spd\": 3.5\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 20.7,\n"
-        + "      \"app_min_temp\": 15.4,\n"
-        + "      \"clouds\": 66,\n"
-        + "      \"clouds_hi\": 100,\n"
-        + "      \"clouds_low\": 11,\n"
-        + "      \"clouds_mid\": 66,\n"
-        + "      \"datetime\": \"2023-11-18\",\n"
-        + "      \"dewpt\": 10.1,\n"
-        + "      \"high_temp\": 23.5,\n"
-        + "      \"low_temp\": 14.2,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 23.5,\n"
-        + "      \"min_temp\": 13.9,\n"
-        + "      \"moon_phase\": 0.434542,\n"
-        + "      \"moon_phase_lunation\": 0.19,\n"
-        + "      \"moonrise_ts\": 1700299608,\n"
-        + "      \"moonset_ts\": 1700339546,\n"
-        + "      \"ozone\": 293.9,\n"
-        + "      \"pop\": 20,\n"
-        + "      \"precip\": 0.0625,\n"
-        + "      \"pres\": 975.3,\n"
-        + "      \"rh\": 61,\n"
-        + "      \"slp\": 978.1,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700281535,\n"
-        + "      \"sunset_ts\": 1700318625,\n"
-        + "      \"temp\": 18.4,\n"
-        + "      \"ts\": 1700258460,\n"
-        + "      \"uv\": 4.1,\n"
-        + "      \"valid_date\": \"2023-11-18\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c03d\",\n"
-        + "        \"code\": 803,\n"
-        + "        \"description\": \"Broken clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SE\",\n"
-        + "      \"wind_cdir_full\": \"southeast\",\n"
-        + "      \"wind_dir\": 138,\n"
-        + "      \"wind_gust_spd\": 3.2,\n"
-        + "      \"wind_spd\": 3.2\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 20.3,\n"
-        + "      \"app_min_temp\": 15.8,\n"
-        + "      \"clouds\": 10,\n"
-        + "      \"clouds_hi\": 0,\n"
-        + "      \"clouds_low\": 10,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-19\",\n"
-        + "      \"dewpt\": 11.7,\n"
-        + "      \"high_temp\": 22.7,\n"
-        + "      \"low_temp\": 14.4,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 22.7,\n"
-        + "      \"min_temp\": 14.2,\n"
-        + "      \"moon_phase\": 0.554423,\n"
-        + "      \"moon_phase_lunation\": 0.22,\n"
-        + "      \"moonrise_ts\": 1700388594,\n"
-        + "      \"moonset_ts\": 1700430181,\n"
-        + "      \"ozone\": 294.6,\n"
-        + "      \"pop\": 25,\n"
-        + "      \"precip\": 1,\n"
-        + "      \"pres\": 972.8,\n"
-        + "      \"rh\": 67,\n"
-        + "      \"slp\": 975.6,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700367992,\n"
-        + "      \"sunset_ts\": 1700404995,\n"
-        + "      \"temp\": 18.2,\n"
-        + "      \"ts\": 1700344860,\n"
-        + "      \"uv\": 4.1,\n"
-        + "      \"valid_date\": \"2023-11-19\",\n"
-        + "      \"vis\": 23.536,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c02d\",\n"
-        + "        \"code\": 801,\n"
-        + "        \"description\": \"Few clouds\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SE\",\n"
-        + "      \"wind_cdir_full\": \"southeast\",\n"
-        + "      \"wind_dir\": 125,\n"
-        + "      \"wind_gust_spd\": 2.7,\n"
-        + "      \"wind_spd\": 3.2\n"
-        + "    },\n"
-        + "    {\n"
-        + "      \"app_max_temp\": 19.2,\n"
-        + "      \"app_min_temp\": 16,\n"
-        + "      \"clouds\": 0,\n"
-        + "      \"clouds_hi\": 1,\n"
-        + "      \"clouds_low\": 0,\n"
-        + "      \"clouds_mid\": 0,\n"
-        + "      \"datetime\": \"2023-11-20\",\n"
-        + "      \"dewpt\": 10.9,\n"
-        + "      \"high_temp\": 21.6,\n"
-        + "      \"low_temp\": 14.6,\n"
-        + "      \"max_dhi\": null,\n"
-        + "      \"max_temp\": 21.6,\n"
-        + "      \"min_temp\": 14.4,\n"
-        + "      \"moon_phase\": 0.671302,\n"
-        + "      \"moon_phase_lunation\": 0.26,\n"
-        + "      \"moonrise_ts\": 1700477180,\n"
-        + "      \"moonset_ts\": 1700434317,\n"
-        + "      \"ozone\": 273.5,\n"
-        + "      \"pop\": 10,\n"
-        + "      \"precip\": 0.25,\n"
-        + "      \"pres\": 972.5,\n"
-        + "      \"rh\": 65,\n"
-        + "      \"slp\": 975.4,\n"
-        + "      \"snow\": 0,\n"
-        + "      \"snow_depth\": 0,\n"
-        + "      \"sunrise_ts\": 1700454449,\n"
-        + "      \"sunset_ts\": 1700491368,\n"
-        + "      \"temp\": 17.8,\n"
-        + "      \"ts\": 1700431260,\n"
-        + "      \"uv\": 4,\n"
-        + "      \"valid_date\": \"2023-11-20\",\n"
-        + "      \"vis\": 24.128,\n"
-        + "      \"weather\": {\n"
-        + "        \"icon\": \"c01d\",\n"
-        + "        \"code\": 800,\n"
-        + "        \"description\": \"Clear Sky\"\n"
-        + "      },\n"
-        + "      \"wind_cdir\": \"SE\",\n"
-        + "      \"wind_cdir_full\": \"southeast\",\n"
-        + "      \"wind_dir\": 129,\n"
-        + "      \"wind_gust_spd\": 3.4,\n"
-        + "      \"wind_spd\": 3.7\n"
-        + "    }\n"
-        + "  ],\n"
-        + "  \"lat\": \"34.66942\",\n"
-        + "  \"lon\": \"32.70132\",\n"
-        + "  \"state_code\": \"05\",\n"
-        + "  \"timezone\": \"Asia/Nicosia\"\n"
-        + "}";
+    return """
+        {
+          "city_name": "Pissouri",
+          "country_code": "CY",
+          "data": [
+            {
+              "app_max_temp": 24.1,
+              "app_min_temp": 19,
+              "clouds": 4,
+              "clouds_hi": 0,
+              "clouds_low": 22,
+              "clouds_mid": 0,
+              "datetime": "2023-11-08",
+              "dewpt": 15.9,
+              "high_temp": 21.8,
+              "low_temp": 17.6,
+              "max_dhi": null,
+              "max_temp": 24.1,
+              "min_temp": 18.9,
+              "moon_phase": 0.143755,
+              "moon_phase_lunation": 0.85,
+              "moonrise_ts": 1699399266,
+              "moonset_ts": 1699447824,
+              "ozone": 263.2,
+              "pop": 0,
+              "precip": 0,
+              "pres": 989.9,
+              "rh": 71,
+              "slp": 1017.6,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699416962,
+              "sunset_ts": 1699455012,
+              "temp": 21.9,
+              "ts": 1699426860,
+              "uv": 0,
+              "valid_date": "2023-11-08",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "SSW",
+              "wind_cdir_full": "south-southwest",
+              "wind_dir": 193,
+              "wind_gust_spd": 5.1,
+              "wind_spd": 2.2
+            },
+            {
+              "app_max_temp": 23.5,
+              "app_min_temp": 17.6,
+              "clouds": 37,
+              "clouds_hi": 67,
+              "clouds_low": 19,
+              "clouds_mid": 22,
+              "datetime": "2023-11-09",
+              "dewpt": 14.8,
+              "high_temp": 23.5,
+              "low_temp": 18.5,
+              "max_dhi": null,
+              "max_temp": 23.5,
+              "min_temp": 17.6,
+              "moon_phase": 0.0813748,
+              "moon_phase_lunation": 0.89,
+              "moonrise_ts": 1699489046,
+              "moonset_ts": 1699535644,
+              "ozone": 268.6,
+              "pop": 20,
+              "precip": 0.001953125,
+              "pres": 988.4,
+              "rh": 73,
+              "slp": 1016.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699503418,
+              "sunset_ts": 1699541366,
+              "temp": 20.6,
+              "ts": 1699480860,
+              "uv": 4.1,
+              "valid_date": "2023-11-09",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Scattered clouds",
+                "code": 802
+              },
+              "wind_cdir": "SSW",
+              "wind_cdir_full": "south-southwest",
+              "wind_dir": 201,
+              "wind_gust_spd": 6.4,
+              "wind_spd": 2.9
+            },
+            {
+              "app_max_temp": 23.9,
+              "app_min_temp": 18.3,
+              "clouds": 15,
+              "clouds_hi": 25,
+              "clouds_low": 20,
+              "clouds_mid": 14,
+              "datetime": "2023-11-10",
+              "dewpt": 15.3,
+              "high_temp": 23.8,
+              "low_temp": 17.4,
+              "max_dhi": null,
+              "max_temp": 23.8,
+              "min_temp": 18.3,
+              "moon_phase": 0.0347566,
+              "moon_phase_lunation": 0.92,
+              "moonrise_ts": 1699578851,
+              "moonset_ts": 1699623556,
+              "ozone": 279.6,
+              "pop": 20,
+              "precip": 0.001953125,
+              "pres": 989.5,
+              "rh": 74,
+              "slp": 1017.4,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699589875,
+              "sunset_ts": 1699627721,
+              "temp": 20.7,
+              "ts": 1699567260,
+              "uv": 4.2,
+              "valid_date": "2023-11-10",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "W",
+              "wind_cdir_full": "west",
+              "wind_dir": 260,
+              "wind_gust_spd": 7.3,
+              "wind_spd": 3.1
+            },
+            {
+              "app_max_temp": 23.8,
+              "app_min_temp": 17.4,
+              "clouds": 3,
+              "clouds_hi": 17,
+              "clouds_low": 22,
+              "clouds_mid": 0,
+              "datetime": "2023-11-11",
+              "dewpt": 14.9,
+              "high_temp": 23.8,
+              "low_temp": 16.4,
+              "max_dhi": null,
+              "max_temp": 23.8,
+              "min_temp": 17.4,
+              "moon_phase": 0.00704502,
+              "moon_phase_lunation": 0.95,
+              "moonrise_ts": 1699668745,
+              "moonset_ts": 1699711647,
+              "ozone": 290.2,
+              "pop": 0,
+              "precip": 0,
+              "pres": 988.9,
+              "rh": 75,
+              "slp": 1013.7,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699676333,
+              "sunset_ts": 1699714079,
+              "temp": 20.1,
+              "ts": 1699653660,
+              "uv": 4.1,
+              "valid_date": "2023-11-11",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "ESE",
+              "wind_cdir_full": "east-southeast",
+              "wind_dir": 103,
+              "wind_gust_spd": 4.2,
+              "wind_spd": 2
+            },
+            {
+              "app_max_temp": 23.6,
+              "app_min_temp": 16.4,
+              "clouds": 13,
+              "clouds_hi": 53,
+              "clouds_low": 0,
+              "clouds_mid": 0,
+              "datetime": "2023-11-12",
+              "dewpt": 10.6,
+              "high_temp": 24.2,
+              "low_temp": 14.9,
+              "max_dhi": null,
+              "max_temp": 24.2,
+              "min_temp": 16.4,
+              "moon_phase": 0.00101482,
+              "moon_phase_lunation": 0.99,
+              "moonrise_ts": 1699758787,
+              "moonset_ts": 1699800020,
+              "ozone": 287,
+              "pop": 0,
+              "precip": 0,
+              "pres": 975.8,
+              "rh": 58,
+              "slp": 978.6,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699762790,
+              "sunset_ts": 1699800437,
+              "temp": 19.4,
+              "ts": 1699740060,
+              "uv": 3.5,
+              "valid_date": "2023-11-12",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "SSW",
+              "wind_cdir_full": "south-southwest",
+              "wind_dir": 209,
+              "wind_gust_spd": 2,
+              "wind_spd": 2.2
+            },
+            {
+              "app_max_temp": 22.1,
+              "app_min_temp": 14.9,
+              "clouds": 21,
+              "clouds_hi": 53,
+              "clouds_low": 0,
+              "clouds_mid": 11,
+              "datetime": "2023-11-13",
+              "dewpt": 9.2,
+              "high_temp": 22.8,
+              "low_temp": 15.1,
+              "max_dhi": null,
+              "max_temp": 22.8,
+              "min_temp": 14.9,
+              "moon_phase": 0.018674,
+              "moon_phase_lunation": 0.02,
+              "moonrise_ts": 1699849013,
+              "moonset_ts": 1699888792,
+              "ozone": 287.2,
+              "pop": 0,
+              "precip": 0,
+              "pres": 976.1,
+              "rh": 57,
+              "slp": 978.9,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699849247,
+              "sunset_ts": 1699886798,
+              "temp": 18.2,
+              "ts": 1699826460,
+              "uv": 4.1,
+              "valid_date": "2023-11-13",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Scattered clouds",
+                "code": 802
+              },
+              "wind_cdir": "SE",
+              "wind_cdir_full": "southeast",
+              "wind_dir": 138,
+              "wind_gust_spd": 1.5,
+              "wind_spd": 1.7
+            },
+            {
+              "app_max_temp": 19.6,
+              "app_min_temp": 15.1,
+              "clouds": 57,
+              "clouds_hi": 95,
+              "clouds_low": 39,
+              "clouds_mid": 35,
+              "datetime": "2023-11-14",
+              "dewpt": 13.5,
+              "high_temp": 19.6,
+              "low_temp": 15.1,
+              "max_dhi": null,
+              "max_temp": 19.6,
+              "min_temp": 15.1,
+              "moon_phase": 0.0608709,
+              "moon_phase_lunation": 0.05,
+              "moonrise_ts": 1699939404,
+              "moonset_ts": 1699978073,
+              "ozone": 290.9,
+              "pop": 85,
+              "precip": 11.3125,
+              "pres": 971.3,
+              "rh": 77,
+              "slp": 974.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699935705,
+              "sunset_ts": 1699973160,
+              "temp": 17.6,
+              "ts": 1699912860,
+              "uv": 4.2,
+              "valid_date": "2023-11-14",
+              "vis": 17.946,
+              "weather": {
+                "icon": "r02d",
+                "description": "Moderate rain",
+                "code": 501
+              },
+              "wind_cdir": "SW",
+              "wind_cdir_full": "southwest",
+              "wind_dir": 232,
+              "wind_gust_spd": 6,
+              "wind_spd": 4.2
+            },
+            {
+              "app_max_temp": 17.7,
+              "app_min_temp": 13,
+              "clouds": 0,
+              "clouds_hi": 0,
+              "clouds_low": 0,
+              "clouds_mid": 0,
+              "datetime": "2023-11-15",
+              "dewpt": 4.2,
+              "high_temp": 17.7,
+              "low_temp": 12.9,
+              "max_dhi": null,
+              "max_temp": 17.7,
+              "min_temp": 13,
+              "moon_phase": 0.126937,
+              "moon_phase_lunation": 0.09,
+              "moonrise_ts": 1700029854,
+              "moonset_ts": 1700067912,
+              "ozone": 301.8,
+              "pop": 0,
+              "precip": 0,
+              "pres": 967.9,
+              "rh": 49,
+              "slp": 970.8,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700022162,
+              "sunset_ts": 1700059523,
+              "temp": 15.3,
+              "ts": 1699999260,
+              "uv": 4.2,
+              "valid_date": "2023-11-15",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c01d",
+                "description": "Clear Sky",
+                "code": 800
+              },
+              "wind_cdir": "NW",
+              "wind_cdir_full": "northwest",
+              "wind_dir": 308,
+              "wind_gust_spd": 12.9,
+              "wind_spd": 9.4
+            },
+            {
+              "app_max_temp": 18.1,
+              "app_min_temp": 12.9,
+              "clouds": 17,
+              "clouds_hi": 30,
+              "clouds_low": 0,
+              "clouds_mid": 13,
+              "datetime": "2023-11-16",
+              "dewpt": 4.7,
+              "high_temp": 19.1,
+              "low_temp": 13.1,
+              "max_dhi": null,
+              "max_temp": 19.1,
+              "min_temp": 12.9,
+              "moon_phase": 0.214398,
+              "moon_phase_lunation": 0.12,
+              "moonrise_ts": 1700120170,
+              "moonset_ts": 1700158235,
+              "ozone": 288.3,
+              "pop": 0,
+              "precip": 0,
+              "pres": 972.6,
+              "rh": 50,
+              "slp": 975.5,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700108620,
+              "sunset_ts": 1700145889,
+              "temp": 15.4,
+              "ts": 1700085660,
+              "uv": 4.2,
+              "valid_date": "2023-11-16",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "WSW",
+              "wind_cdir_full": "west-southwest",
+              "wind_dir": 240,
+              "wind_gust_spd": 4.6,
+              "wind_spd": 3.5
+            },
+            {
+              "app_max_temp": 18.7,
+              "app_min_temp": 13.1,
+              "clouds": 1,
+              "clouds_hi": 5,
+              "clouds_low": 0,
+              "clouds_mid": 0,
+              "datetime": "2023-11-17",
+              "dewpt": 7.3,
+              "high_temp": 19.5,
+              "low_temp": 14.4,
+              "max_dhi": null,
+              "max_temp": 19.5,
+              "min_temp": 13.1,
+              "moon_phase": 0.318904,
+              "moon_phase_lunation": 0.16,
+              "moonrise_ts": 1700210133,
+              "moonset_ts": 1700248851,
+              "ozone": 272.2,
+              "pop": 0,
+              "precip": 0,
+              "pres": 978.3,
+              "rh": 57,
+              "slp": 981.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700195077,
+              "sunset_ts": 1700232256,
+              "temp": 16,
+              "ts": 1700172060,
+              "uv": 4.1,
+              "valid_date": "2023-11-17",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c01d",
+                "description": "Clear Sky",
+                "code": 800
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 98,
+              "wind_gust_spd": 2,
+              "wind_spd": 2.1
+            },
+            {
+              "app_max_temp": 21,
+              "app_min_temp": 14.4,
+              "clouds": 0,
+              "clouds_hi": 0,
+              "clouds_low": 0,
+              "clouds_mid": 0,
+              "datetime": "2023-11-18",
+              "dewpt": 8.4,
+              "high_temp": 21.6,
+              "low_temp": 15.5,
+              "max_dhi": null,
+              "max_temp": 21.6,
+              "min_temp": 14.4,
+              "moon_phase": 0.434542,
+              "moon_phase_lunation": 0.19,
+              "moonrise_ts": 1700299608,
+              "moonset_ts": 1700339546,
+              "ozone": 259.4,
+              "pop": 0,
+              "precip": 0,
+              "pres": 979.1,
+              "rh": 55,
+              "slp": 982,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700281535,
+              "sunset_ts": 1700318625,
+              "temp": 17.6,
+              "ts": 1700258460,
+              "uv": 4.1,
+              "valid_date": "2023-11-18",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c01d",
+                "description": "Clear Sky",
+                "code": 800
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 92,
+              "wind_gust_spd": 2.6,
+              "wind_spd": 2.6
+            },
+            {
+              "app_max_temp": 24.4,
+              "app_min_temp": 17.3,
+              "clouds": 52,
+              "clouds_hi": 100,
+              "clouds_low": 0,
+              "clouds_mid": 40,
+              "datetime": "2023-11-19",
+              "dewpt": 8.3,
+              "high_temp": 27.5,
+              "low_temp": 19.3,
+              "max_dhi": null,
+              "max_temp": 27.5,
+              "min_temp": 15.5,
+              "moon_phase": 0.554423,
+              "moon_phase_lunation": 0.22,
+              "moonrise_ts": 1700388594,
+              "moonset_ts": 1700430181,
+              "ozone": 253,
+              "pop": 0,
+              "precip": 0,
+              "pres": 976.3,
+              "rh": 46,
+              "slp": 979.1,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700367992,
+              "sunset_ts": 1700404995,
+              "temp": 21.1,
+              "ts": 1700344860,
+              "uv": 4.1,
+              "valid_date": "2023-11-19",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c03d",
+                "description": "Broken clouds",
+                "code": 803
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 88,
+              "wind_gust_spd": 4.5,
+              "wind_spd": 4.6
+            },
+            {
+              "app_max_temp": 22.5,
+              "app_min_temp": 20.7,
+              "clouds": 55,
+              "clouds_hi": 50,
+              "clouds_low": 5,
+              "clouds_mid": 55,
+              "datetime": "2023-11-20",
+              "dewpt": 9.3,
+              "high_temp": 25.1,
+              "low_temp": 15.6,
+              "max_dhi": null,
+              "max_temp": 25.1,
+              "min_temp": 19.3,
+              "moon_phase": 0.671302,
+              "moon_phase_lunation": 0.26,
+              "moonrise_ts": 1700477180,
+              "moonset_ts": 1700434317,
+              "ozone": 254.8,
+              "pop": 0,
+              "precip": 0,
+              "pres": 972,
+              "rh": 45,
+              "slp": 974.8,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700454449,
+              "sunset_ts": 1700491368,
+              "temp": 22.1,
+              "ts": 1700431260,
+              "uv": 4,
+              "valid_date": "2023-11-20",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c03d",
+                "description": "Broken clouds",
+                "code": 803
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 92,
+              "wind_gust_spd": 5.3,
+              "wind_spd": 3.8
+            },
+            {
+              "app_max_temp": 17.3,
+              "app_min_temp": 17.2,
+              "clouds": 72,
+              "clouds_hi": 3,
+              "clouds_low": 41,
+              "clouds_mid": 51,
+              "datetime": "2023-11-21",
+              "dewpt": 13.9,
+              "high_temp": 18.9,
+              "low_temp": 13.1,
+              "max_dhi": null,
+              "max_temp": 19.1,
+              "min_temp": 15.5,
+              "moon_phase": 0.778117,
+              "moon_phase_lunation": 0.29,
+              "moonrise_ts": 1700565487,
+              "moonset_ts": 1700524782,
+              "ozone": 280.3,
+              "pop": 60,
+              "precip": 2.75,
+              "pres": 972.3,
+              "rh": 81,
+              "slp": 975.1,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700540906,
+              "sunset_ts": 1700577742,
+              "temp": 17.3,
+              "ts": 1700517660,
+              "uv": 4,
+              "valid_date": "2023-11-21",
+              "vis": 18.54,
+              "weather": {
+                "icon": "r04d",
+                "description": "Light shower rain",
+                "code": 520
+              },
+              "wind_cdir": "W",
+              "wind_cdir_full": "west",
+              "wind_dir": 261,
+              "wind_gust_spd": 6.6,
+              "wind_spd": 5.3
+            },
+            {
+              "app_max_temp": 17.7,
+              "app_min_temp": 14.5,
+              "clouds": 17,
+              "clouds_hi": 54,
+              "clouds_low": 4,
+              "clouds_mid": 0,
+              "datetime": "2023-11-22",
+              "dewpt": 9.5,
+              "high_temp": 20.3,
+              "low_temp": 12,
+              "max_dhi": null,
+              "max_temp": 20.3,
+              "min_temp": 13.1,
+              "moon_phase": 0.868519,
+              "moon_phase_lunation": 0.32,
+              "moonrise_ts": 1700653633,
+              "moonset_ts": 1700615236,
+              "ozone": 276.9,
+              "pop": 50,
+              "precip": 2.8125,
+              "pres": 976.5,
+              "rh": 65,
+              "slp": 979.4,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700627363,
+              "sunset_ts": 1700664118,
+              "temp": 16.5,
+              "ts": 1700604060,
+              "uv": 4,
+              "valid_date": "2023-11-22",
+              "vis": 24.128,
+              "weather": {
+                "icon": "r01d",
+                "description": "Light rain",
+                "code": 500
+              },
+              "wind_cdir": "NW",
+              "wind_cdir_full": "northwest",
+              "wind_dir": 304,
+              "wind_gust_spd": 4.6,
+              "wind_spd": 3.7
+            },
+            {
+              "app_max_temp": 17.8,
+              "app_min_temp": 13.3,
+              "clouds": 16,
+              "clouds_hi": 47,
+              "clouds_low": 6,
+              "clouds_mid": 0,
+              "datetime": "2023-11-23",
+              "dewpt": 8.1,
+              "high_temp": 20.4,
+              "low_temp": 12.1,
+              "max_dhi": null,
+              "max_temp": 20.4,
+              "min_temp": 12,
+              "moon_phase": 0.868519,
+              "moon_phase_lunation": 0.36,
+              "moonrise_ts": 1700741723,
+              "moonset_ts": 1700701636,
+              "ozone": 295.3,
+              "pop": 0,
+              "precip": 0,
+              "pres": 976.8,
+              "rh": 61,
+              "slp": 979.6,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700713820,
+              "sunset_ts": 1700750496,
+              "temp": 15.9,
+              "ts": 1700690460,
+              "uv": 3.9,
+              "valid_date": "2023-11-23",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "W",
+              "wind_cdir_full": "west",
+              "wind_dir": 279,
+              "wind_gust_spd": 1.5,
+              "wind_spd": 2
+            }
+          ],
+          "lat": "34.66942",
+          "lon": "32.70132",
+          "state_code": "05",
+          "timezone": "Asia/Nicosia"
+        }""";
   }
 
   public static String pissouriWeatherBitForecastShortResponse() {
-    return "{\n" +
-        "  \"city_name\": \"Pissouri\",\n" +
-        "  \"country_code\": \"CY\",\n" +
-        "  \"data\": [\n" +
-        "    {\n" +
-        "      \"app_max_temp\": 24.6,\n" +
-        "      \"app_min_temp\": 18.2,\n" +
-        "      \"clouds\": 0,\n" +
-        "      \"clouds_hi\": 0,\n" +
-        "      \"clouds_low\": 23,\n" +
-        "      \"clouds_mid\": 0,\n" +
-        "      \"datetime\": \"2023-11-04\",\n" +
-        "      \"dewpt\": 17.1,\n" +
-        "      \"high_temp\": 24.3,\n" +
-        "      \"low_temp\": 18.4,\n" +
-        "      \"max_dhi\": null,\n" +
-        "      \"max_temp\": 24.3,\n" +
-        "      \"min_temp\": 18.2,\n" +
-        "      \"moon_phase\": 0.490503,\n" +
-        "      \"moon_phase_lunation\": 0.72,\n" +
-        "      \"moonrise_ts\": 1699129593,\n" +
-        "      \"moonset_ts\": 1699095974,\n" +
-        "      \"ozone\": 275.9,\n" +
-        "      \"pop\": 0,\n" +
-        "      \"precip\": 0,\n" +
-        "      \"pres\": 987.4,\n" +
-        "      \"rh\": 81,\n" +
-        "      \"slp\": 1015.1,\n" +
-        "      \"snow\": 0,\n" +
-        "      \"snow_depth\": 0,\n" +
-        "      \"sunrise_ts\": 1699071137,\n" +
-        "      \"sunset_ts\": 1699109611,\n" +
-        "      \"temp\": 21.1,\n" +
-        "      \"ts\": 1699048860,\n" +
-        "      \"uv\": 4.5,\n" +
-        "      \"valid_date\": \"2023-11-04\",\n" +
-        "      \"vis\": 24.128,\n" +
-        "      \"weather\": {\n" +
-        "        \"description\": \"Clear Sky\",\n" +
-        "        \"code\": 800,\n" +
-        "        \"icon\": \"c01d\"\n" +
-        "      },\n" +
-        "      \"wind_cdir\": \"ESE\",\n" +
-        "      \"wind_cdir_full\": \"east-southeast\",\n" +
-        "      \"wind_dir\": 108,\n" +
-        "      \"wind_gust_spd\": 3.8,\n" +
-        "      \"wind_spd\": 1.7\n" +
-        "    },\n" +
-        "    {\n" +
-        "      \"app_max_temp\": 25,\n" +
-        "      \"app_min_temp\": 18.4,\n" +
-        "      \"clouds\": 8,\n" +
-        "      \"clouds_hi\": 18,\n" +
-        "      \"clouds_low\": 9,\n" +
-        "      \"clouds_mid\": 5,\n" +
-        "      \"datetime\": \"2023-11-05\",\n" +
-        "      \"dewpt\": 16.7,\n" +
-        "      \"high_temp\": 24.9,\n" +
-        "      \"low_temp\": 18.9,\n" +
-        "      \"max_dhi\": null,\n" +
-        "      \"max_temp\": 24.9,\n" +
-        "      \"min_temp\": 18.4,\n" +
-        "      \"moon_phase\": 0.394735,\n" +
-        "      \"moon_phase_lunation\": 0.75,\n" +
-        "      \"moonrise_ts\": 1699219563,\n" +
-        "      \"moonset_ts\": 1699184177,\n" +
-        "      \"ozone\": 280.6,\n" +
-        "      \"pop\": 0,\n" +
-        "      \"precip\": 0,\n" +
-        "      \"pres\": 988,\n" +
-        "      \"rh\": 79,\n" +
-        "      \"slp\": 1015.8,\n" +
-        "      \"snow\": 0,\n" +
-        "      \"snow_depth\": 0,\n" +
-        "      \"sunrise_ts\": 1699157593,\n" +
-        "      \"sunset_ts\": 1699195959,\n" +
-        "      \"temp\": 21.1,\n" +
-        "      \"ts\": 1699135260,\n" +
-        "      \"uv\": 4.4,\n" +
-        "      \"valid_date\": \"2023-11-05\",\n" +
-        "      \"vis\": 24.128,\n" +
-        "      \"weather\": {\n" +
-        "        \"description\": \"Few clouds\",\n" +
-        "        \"code\": 801,\n" +
-        "        \"icon\": \"c02d\"\n" +
-        "      },\n" +
-        "      \"wind_cdir\": \"ESE\",\n" +
-        "      \"wind_cdir_full\": \"east-southeast\",\n" +
-        "      \"wind_dir\": 108,\n" +
-        "      \"wind_gust_spd\": 3.8,\n" +
-        "      \"wind_spd\": 1.7\n" +
-        "    }\n" +
-        "  ],\n" +
-        "  \"lat\": \"34.66942\",\n" +
-        "  \"lon\": \"32.70132\",\n" +
-        "  \"state_code\": \"05\",\n" +
-        "  \"timezone\": \"Asia/Nicosia\"\n" +
-        "}";
+    return """
+        {
+          "city_name": "Pissouri",
+          "country_code": "CY",
+          "data": [
+            {
+              "app_max_temp": 24.6,
+              "app_min_temp": 18.2,
+              "clouds": 0,
+              "clouds_hi": 0,
+              "clouds_low": 23,
+              "clouds_mid": 0,
+              "datetime": "2023-11-04",
+              "dewpt": 17.1,
+              "high_temp": 24.3,
+              "low_temp": 18.4,
+              "max_dhi": null,
+              "max_temp": 24.3,
+              "min_temp": 18.2,
+              "moon_phase": 0.490503,
+              "moon_phase_lunation": 0.72,
+              "moonrise_ts": 1699129593,
+              "moonset_ts": 1699095974,
+              "ozone": 275.9,
+              "pop": 0,
+              "precip": 0,
+              "pres": 987.4,
+              "rh": 81,
+              "slp": 1015.1,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699071137,
+              "sunset_ts": 1699109611,
+              "temp": 21.1,
+              "ts": 1699048860,
+              "uv": 4.5,
+              "valid_date": "2023-11-04",
+              "vis": 24.128,
+              "weather": {
+                "description": "Clear Sky",
+                "code": 800,
+                "icon": "c01d"
+              },
+              "wind_cdir": "ESE",
+              "wind_cdir_full": "east-southeast",
+              "wind_dir": 108,
+              "wind_gust_spd": 3.8,
+              "wind_spd": 1.7
+            },
+            {
+              "app_max_temp": 25,
+              "app_min_temp": 18.4,
+              "clouds": 8,
+              "clouds_hi": 18,
+              "clouds_low": 9,
+              "clouds_mid": 5,
+              "datetime": "2023-11-05",
+              "dewpt": 16.7,
+              "high_temp": 24.9,
+              "low_temp": 18.9,
+              "max_dhi": null,
+              "max_temp": 24.9,
+              "min_temp": 18.4,
+              "moon_phase": 0.394735,
+              "moon_phase_lunation": 0.75,
+              "moonrise_ts": 1699219563,
+              "moonset_ts": 1699184177,
+              "ozone": 280.6,
+              "pop": 0,
+              "precip": 0,
+              "pres": 988,
+              "rh": 79,
+              "slp": 1015.8,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699157593,
+              "sunset_ts": 1699195959,
+              "temp": 21.1,
+              "ts": 1699135260,
+              "uv": 4.4,
+              "valid_date": "2023-11-05",
+              "vis": 24.128,
+              "weather": {
+                "description": "Few clouds",
+                "code": 801,
+                "icon": "c02d"
+              },
+              "wind_cdir": "ESE",
+              "wind_cdir_full": "east-southeast",
+              "wind_dir": 108,
+              "wind_gust_spd": 3.8,
+              "wind_spd": 1.7
+            }
+          ],
+          "lat": "34.66942",
+          "lon": "32.70132",
+          "state_code": "05",
+          "timezone": "Asia/Nicosia"
+        }""";
+  }
+
+  public static String bridgetownWeatherBitForecastFullResponse() {
+    return """
+        {
+          "city_name": "Bridgetown",
+          "country_code": "BB",
+          "data": [
+            {
+              "app_max_temp": 36,
+              "app_min_temp": 29.6,
+              "clouds": 39,
+              "clouds_hi": 74,
+              "clouds_low": 4,
+              "clouds_mid": 0,
+              "datetime": "2023-11-08",
+              "dewpt": 23.8,
+              "high_temp": 28.5,
+              "low_temp": 26.5,
+              "max_dhi": null,
+              "max_temp": 30,
+              "min_temp": 26.7,
+              "moon_phase": 0.126348,
+              "moon_phase_lunation": 0.85,
+              "moonrise_ts": 1699423285,
+              "moonset_ts": 1699470455,
+              "ozone": 250.8,
+              "pop": 0,
+              "precip": 0,
+              "pres": 1009.8,
+              "rh": 78,
+              "slp": 1012,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699437301,
+              "sunset_ts": 1699479127,
+              "temp": 28,
+              "ts": 1699426860,
+              "uv": 3.2,
+              "valid_date": "2023-11-08",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Scattered clouds",
+                "code": 802
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 100,
+              "wind_gust_spd": 7.7,
+              "wind_spd": 4.9
+            },
+            {
+              "app_max_temp": 37.7,
+              "app_min_temp": 27.5,
+              "clouds": 63,
+              "clouds_hi": 24,
+              "clouds_low": 5,
+              "clouds_mid": 0,
+              "datetime": "2023-11-09",
+              "dewpt": 24.6,
+              "high_temp": 30.9,
+              "low_temp": 27.1,
+              "max_dhi": null,
+              "max_temp": 30.9,
+              "min_temp": 26.5,
+              "moon_phase": 0.0673312,
+              "moon_phase_lunation": 0.89,
+              "moonrise_ts": 1699512388,
+              "moonset_ts": 1699558967,
+              "ozone": 247.8,
+              "pop": 90,
+              "precip": 31.5,
+              "pres": 1009.7,
+              "rh": 79,
+              "slp": 1011.9,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699523721,
+              "sunset_ts": 1699565516,
+              "temp": 28.6,
+              "ts": 1699502460,
+              "uv": 8.4,
+              "valid_date": "2023-11-09",
+              "vis": 24.083,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 93,
+              "wind_gust_spd": 9.5,
+              "wind_spd": 4.2
+            },
+            {
+              "app_max_temp": 35.7,
+              "app_min_temp": 30.4,
+              "clouds": 73,
+              "clouds_hi": 56,
+              "clouds_low": 12,
+              "clouds_mid": 1,
+              "datetime": "2023-11-10",
+              "dewpt": 24.5,
+              "high_temp": 29.6,
+              "low_temp": 27,
+              "max_dhi": null,
+              "max_temp": 29.6,
+              "min_temp": 27.1,
+              "moon_phase": 0.0251813,
+              "moon_phase_lunation": 0.92,
+              "moonrise_ts": 1699601518,
+              "moonset_ts": 1699647602,
+              "ozone": 250.4,
+              "pop": 95,
+              "precip": 84,
+              "pres": 1009.6,
+              "rh": 79,
+              "slp": 1011.8,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699610143,
+              "sunset_ts": 1699651907,
+              "temp": 28.4,
+              "ts": 1699588860,
+              "uv": 7.3,
+              "valid_date": "2023-11-10",
+              "vis": 22.169,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 92,
+              "wind_gust_spd": 11.3,
+              "wind_spd": 5.3
+            },
+            {
+              "app_max_temp": 34.7,
+              "app_min_temp": 30.1,
+              "clouds": 80,
+              "clouds_hi": 82,
+              "clouds_low": 11,
+              "clouds_mid": 41,
+              "datetime": "2023-11-11",
+              "dewpt": 24.5,
+              "high_temp": 29,
+              "low_temp": 27,
+              "max_dhi": null,
+              "max_temp": 29,
+              "min_temp": 27,
+              "moon_phase": 0.00305731,
+              "moon_phase_lunation": 0.95,
+              "moonrise_ts": 1699690741,
+              "moonset_ts": 1699736436,
+              "ozone": 254.5,
+              "pop": 95,
+              "precip": 84,
+              "pres": 1009.3,
+              "rh": 81,
+              "slp": 1011.5,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699696565,
+              "sunset_ts": 1699738299,
+              "temp": 28.1,
+              "ts": 1699675260,
+              "uv": 7,
+              "valid_date": "2023-11-11",
+              "vis": 22.285,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 91,
+              "wind_gust_spd": 12.1,
+              "wind_spd": 5.7
+            },
+            {
+              "app_max_temp": 34.4,
+              "app_min_temp": 30,
+              "clouds": 80,
+              "clouds_hi": 70,
+              "clouds_low": 1,
+              "clouds_mid": 9,
+              "datetime": "2023-11-12",
+              "dewpt": 24.3,
+              "high_temp": 29.1,
+              "low_temp": 26.9,
+              "max_dhi": null,
+              "max_temp": 29.1,
+              "min_temp": 27,
+              "moon_phase": 0.00360999,
+              "moon_phase_lunation": 0.99,
+              "moonrise_ts": 1699780122,
+              "moonset_ts": 1699825544,
+              "ozone": 254.9,
+              "pop": 95,
+              "precip": 84,
+              "pres": 1009,
+              "rh": 79,
+              "slp": 1011.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699782988,
+              "sunset_ts": 1699824692,
+              "temp": 28.2,
+              "ts": 1699761660,
+              "uv": 7.2,
+              "valid_date": "2023-11-12",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 87,
+              "wind_gust_spd": 11.8,
+              "wind_spd": 5.3
+            },
+            {
+              "app_max_temp": 33.7,
+              "app_min_temp": 29.7,
+              "clouds": 79,
+              "clouds_hi": 41,
+              "clouds_low": 1,
+              "clouds_mid": 3,
+              "datetime": "2023-11-13",
+              "dewpt": 23.8,
+              "high_temp": 29,
+              "low_temp": 26.7,
+              "max_dhi": null,
+              "max_temp": 29,
+              "min_temp": 26.9,
+              "moon_phase": 0.0285294,
+              "moon_phase_lunation": 0.02,
+              "moonrise_ts": 1699869712,
+              "moonset_ts": 1699914980,
+              "ozone": 256.9,
+              "pop": 95,
+              "precip": 80.5,
+              "pres": 1008.6,
+              "rh": 78,
+              "slp": 1010.8,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699869411,
+              "sunset_ts": 1699911086,
+              "temp": 28.1,
+              "ts": 1699848060,
+              "uv": 8.5,
+              "valid_date": "2023-11-13",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 85,
+              "wind_gust_spd": 12.1,
+              "wind_spd": 5.1
+            },
+            {
+              "app_max_temp": 34,
+              "app_min_temp": 29.2,
+              "clouds": 79,
+              "clouds_hi": 1,
+              "clouds_low": 5,
+              "clouds_mid": 0,
+              "datetime": "2023-11-14",
+              "dewpt": 23.6,
+              "high_temp": 29.2,
+              "low_temp": 26.7,
+              "max_dhi": null,
+              "max_temp": 29.2,
+              "min_temp": 26.7,
+              "moon_phase": 0.0781102,
+              "moon_phase_lunation": 0.05,
+              "moonrise_ts": 1699959528,
+              "moonset_ts": 1700004748,
+              "ozone": 253.7,
+              "pop": 95,
+              "precip": 38.5,
+              "pres": 1009.1,
+              "rh": 76,
+              "slp": 1011.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1699955835,
+              "sunset_ts": 1699997481,
+              "temp": 28.2,
+              "ts": 1699934460,
+              "uv": 8.5,
+              "valid_date": "2023-11-14",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 86,
+              "wind_gust_spd": 10.9,
+              "wind_spd": 4.8
+            },
+            {
+              "app_max_temp": 33.7,
+              "app_min_temp": 29.3,
+              "clouds": 82,
+              "clouds_hi": 26,
+              "clouds_low": 6,
+              "clouds_mid": 0,
+              "datetime": "2023-11-15",
+              "dewpt": 23.8,
+              "high_temp": 29,
+              "low_temp": 26.8,
+              "max_dhi": null,
+              "max_temp": 29,
+              "min_temp": 26.7,
+              "moon_phase": 0.150919,
+              "moon_phase_lunation": 0.09,
+              "moonrise_ts": 1700049531,
+              "moonset_ts": 1700094779,
+              "ozone": 252.5,
+              "pop": 95,
+              "precip": 42,
+              "pres": 1008.5,
+              "rh": 78,
+              "slp": 1010.7,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700042260,
+              "sunset_ts": 1700083878,
+              "temp": 28.1,
+              "ts": 1700020860,
+              "uv": 8.4,
+              "valid_date": "2023-11-15",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 87,
+              "wind_gust_spd": 9.6,
+              "wind_spd": 4.5
+            },
+            {
+              "app_max_temp": 33.4,
+              "app_min_temp": 29.4,
+              "clouds": 87,
+              "clouds_hi": 87,
+              "clouds_low": 9,
+              "clouds_mid": 0,
+              "datetime": "2023-11-16",
+              "dewpt": 23.9,
+              "high_temp": 28.8,
+              "low_temp": 26.6,
+              "max_dhi": null,
+              "max_temp": 28.8,
+              "min_temp": 26.7,
+              "moon_phase": 0.150919,
+              "moon_phase_lunation": 0.12,
+              "moonrise_ts": 1700139610,
+              "moonset_ts": 1700181179,
+              "ozone": 251.7,
+              "pop": 95,
+              "precip": 63,
+              "pres": 1008.1,
+              "rh": 79,
+              "slp": 1010.3,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700128685,
+              "sunset_ts": 1700170275,
+              "temp": 28,
+              "ts": 1700107260,
+              "uv": 8.4,
+              "valid_date": "2023-11-16",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 88,
+              "wind_gust_spd": 9.7,
+              "wind_spd": 4.1
+            },
+            {
+              "app_max_temp": 32.6,
+              "app_min_temp": 27.4,
+              "clouds": 89,
+              "clouds_hi": 90,
+              "clouds_low": 3,
+              "clouds_mid": 0,
+              "datetime": "2023-11-17",
+              "dewpt": 23.7,
+              "high_temp": 28.4,
+              "low_temp": 26.3,
+              "max_dhi": null,
+              "max_temp": 28.5,
+              "min_temp": 26.5,
+              "moon_phase": 0.24368,
+              "moon_phase_lunation": 0.16,
+              "moonrise_ts": 1700229610,
+              "moonset_ts": 1700271333,
+              "ozone": 249.4,
+              "pop": 95,
+              "precip": 84,
+              "pres": 1007.7,
+              "rh": 79,
+              "slp": 1009.9,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700215110,
+              "sunset_ts": 1700256673,
+              "temp": 27.7,
+              "ts": 1700193660,
+              "uv": 8.4,
+              "valid_date": "2023-11-17",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 87,
+              "wind_gust_spd": 9.2,
+              "wind_spd": 4.4
+            },
+            {
+              "app_max_temp": 34.8,
+              "app_min_temp": 27.1,
+              "clouds": 82,
+              "clouds_hi": 100,
+              "clouds_low": 4,
+              "clouds_mid": 0,
+              "datetime": "2023-11-18",
+              "dewpt": 23.5,
+              "high_temp": 30.5,
+              "low_temp": 25,
+              "max_dhi": null,
+              "max_temp": 30.5,
+              "min_temp": 25,
+              "moon_phase": 0.351466,
+              "moon_phase_lunation": 0.19,
+              "moonrise_ts": 1700319394,
+              "moonset_ts": 1700361457,
+              "ozone": 249.8,
+              "pop": 85,
+              "precip": 17.0875,
+              "pres": 1007.8,
+              "rh": 78,
+              "slp": 1009.9,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700301536,
+              "sunset_ts": 1700343073,
+              "temp": 27.7,
+              "ts": 1700280060,
+              "uv": 8.3,
+              "valid_date": "2023-11-18",
+              "vis": 24.128,
+              "weather": {
+                "icon": "t03d",
+                "description": "Thunderstorm with heavy rain",
+                "code": 202
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 92,
+              "wind_gust_spd": 9.2,
+              "wind_spd": 5.1
+            },
+            {
+              "app_max_temp": 32.4,
+              "app_min_temp": 31.1,
+              "clouds": 25,
+              "clouds_hi": 98,
+              "clouds_low": 7,
+              "clouds_mid": 0,
+              "datetime": "2023-11-19",
+              "dewpt": 24.3,
+              "high_temp": 30.8,
+              "low_temp": 24.8,
+              "max_dhi": null,
+              "max_temp": 30.8,
+              "min_temp": 24.8,
+              "moon_phase": 0.468145,
+              "moon_phase_lunation": 0.22,
+              "moonrise_ts": 1700408895,
+              "moonset_ts": 1700451450,
+              "ozone": 250,
+              "pop": 10,
+              "precip": 0.3125,
+              "pres": 1009.5,
+              "rh": 82,
+              "slp": 1011.7,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700387963,
+              "sunset_ts": 1700429474,
+              "temp": 27.8,
+              "ts": 1700366460,
+              "uv": 8.3,
+              "valid_date": "2023-11-19",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Scattered clouds",
+                "code": 802
+              },
+              "wind_cdir": "E",
+              "wind_cdir_full": "east",
+              "wind_dir": 101,
+              "wind_gust_spd": 6.2,
+              "wind_spd": 5.2
+            },
+            {
+              "app_max_temp": 31.6,
+              "app_min_temp": 29.4,
+              "clouds": 37,
+              "clouds_hi": 67,
+              "clouds_low": 3,
+              "clouds_mid": 32,
+              "datetime": "2023-11-20",
+              "dewpt": 23.2,
+              "high_temp": 30.7,
+              "low_temp": 24.3,
+              "max_dhi": null,
+              "max_temp": 30.7,
+              "min_temp": 24.3,
+              "moon_phase": 0.586902,
+              "moon_phase_lunation": 0.26,
+              "moonrise_ts": 1700498127,
+              "moonset_ts": 1700454883,
+              "ozone": 248.1,
+              "pop": 20,
+              "precip": 0.125,
+              "pres": 1009.5,
+              "rh": 78,
+              "slp": 1011.7,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700474390,
+              "sunset_ts": 1700515876,
+              "temp": 27.4,
+              "ts": 1700452860,
+              "uv": 8.2,
+              "valid_date": "2023-11-20",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Scattered clouds",
+                "code": 802
+              },
+              "wind_cdir": "ENE",
+              "wind_cdir_full": "east-northeast",
+              "wind_dir": 76,
+              "wind_gust_spd": 7.4,
+              "wind_spd": 6.4
+            },
+            {
+              "app_max_temp": 30.4,
+              "app_min_temp": 29.2,
+              "clouds": 8,
+              "clouds_hi": 13,
+              "clouds_low": 6,
+              "clouds_mid": 3,
+              "datetime": "2023-11-21",
+              "dewpt": 23.1,
+              "high_temp": 30.3,
+              "low_temp": 24.1,
+              "max_dhi": null,
+              "max_temp": 30.3,
+              "min_temp": 24.1,
+              "moon_phase": 0.700737,
+              "moon_phase_lunation": 0.29,
+              "moonrise_ts": 1700587154,
+              "moonset_ts": 1700544589,
+              "ozone": 249.3,
+              "pop": 20,
+              "precip": 0.125,
+              "pres": 1008.5,
+              "rh": 79,
+              "slp": 1010.7,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700560818,
+              "sunset_ts": 1700602279,
+              "temp": 27.1,
+              "ts": 1700539260,
+              "uv": 8.2,
+              "valid_date": "2023-11-21",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "ENE",
+              "wind_cdir_full": "east-northeast",
+              "wind_dir": 67,
+              "wind_gust_spd": 7.2,
+              "wind_spd": 6.3
+            },
+            {
+              "app_max_temp": 30.2,
+              "app_min_temp": 28.9,
+              "clouds": 3,
+              "clouds_hi": 0,
+              "clouds_low": 3,
+              "clouds_mid": 0,
+              "datetime": "2023-11-22",
+              "dewpt": 22.3,
+              "high_temp": 30.2,
+              "low_temp": 24.1,
+              "max_dhi": null,
+              "max_temp": 30.2,
+              "min_temp": 24.1,
+              "moon_phase": 0.80294,
+              "moon_phase_lunation": 0.32,
+              "moonrise_ts": 1700676060,
+              "moonset_ts": 1700634231,
+              "ozone": 250.3,
+              "pop": 30,
+              "precip": 1.4375,
+              "pres": 1008,
+              "rh": 75,
+              "slp": 1010.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700647246,
+              "sunset_ts": 1700688683,
+              "temp": 27.1,
+              "ts": 1700625660,
+              "uv": 8.1,
+              "valid_date": "2023-11-22",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "ENE",
+              "wind_cdir_full": "east-northeast",
+              "wind_dir": 76,
+              "wind_gust_spd": 7,
+              "wind_spd": 6.1
+            },
+            {
+              "app_max_temp": 29.6,
+              "app_min_temp": 27.3,
+              "clouds": 2,
+              "clouds_hi": 4,
+              "clouds_low": 2,
+              "clouds_mid": 0,
+              "datetime": "2023-11-23",
+              "dewpt": 22.4,
+              "high_temp": 30,
+              "low_temp": 23.9,
+              "max_dhi": null,
+              "max_temp": 30,
+              "min_temp": 23.9,
+              "moon_phase": 0.887613,
+              "moon_phase_lunation": 0.36,
+              "moonrise_ts": 1700764937,
+              "moonset_ts": 1700723883,
+              "ozone": 253.6,
+              "pop": 30,
+              "precip": 1.4375,
+              "pres": 1008,
+              "rh": 77,
+              "slp": 1010.2,
+              "snow": 0,
+              "snow_depth": 0,
+              "sunrise_ts": 1700733674,
+              "sunset_ts": 1700775088,
+              "temp": 26.9,
+              "ts": 1700712060,
+              "uv": 8.1,
+              "valid_date": "2023-11-23",
+              "vis": 24.128,
+              "weather": {
+                "icon": "c02d",
+                "description": "Few clouds",
+                "code": 801
+              },
+              "wind_cdir": "ENE",
+              "wind_cdir_full": "east-northeast",
+              "wind_dir": 67,
+              "wind_gust_spd": 7.3,
+              "wind_spd": 6.5
+            }
+          ],
+          "lat": "13.10732",
+          "lon": "-59.62021",
+          "state_code": "08",
+          "timezone": "America/Barbados"
+        }""";
   }
 }

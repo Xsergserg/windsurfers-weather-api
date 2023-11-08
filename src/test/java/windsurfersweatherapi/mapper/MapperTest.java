@@ -30,8 +30,8 @@ class MapperTest {
   @Test
   @DisplayName("JsonNode should be mapped to WeatherData correctly")
   public void jsonShouldBeMappedCorrectly() throws JsonProcessingException {
-    JsonNode jsonNode = objectMapper.readTree(pissouriWeatherBitForecastShortResponse());
-    List<WeatherForecast> actual = mapper.convertToWeatherForecasts(jsonNode);
+    var jsonNode = objectMapper.readTree(pissouriWeatherBitForecastShortResponse());
+    var actual = mapper.convertToWeatherForecasts(jsonNode);
 
     List<WeatherForecast> expected = List.of(
         new WeatherForecast(
@@ -52,7 +52,7 @@ class MapperTest {
   @Test
   @DisplayName("JsonNode with 16 days data should not throw any exceptions")
   public void fullJsonShouldNotThrowAnyException() throws JsonProcessingException {
-    JsonNode jsonNode = objectMapper.readTree(pissouriWeatherBitForecastFullResponse());
+    var jsonNode = objectMapper.readTree(pissouriWeatherBitForecastFullResponse());
 
     assertThatCode(() -> mapper.convertToWeatherForecasts(jsonNode))
         .doesNotThrowAnyException();

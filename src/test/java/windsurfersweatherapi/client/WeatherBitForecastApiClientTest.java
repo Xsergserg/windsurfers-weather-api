@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.from;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.io.IOException;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
@@ -17,7 +16,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.reactive.function.client.WebClient;
 import windsurfersweatherapi.enums.Location;
 import windsurfersweatherapi.exception.CustomRetryExhaustedException;
 import windsurfersweatherapi.exception.WeatherBitForecastApiClientException;
@@ -35,7 +33,7 @@ class WeatherBitForecastApiClientTest {
   void beforeEach() throws IOException {
     server = new MockWebServer();
     server.start();
-    WebClient webClient = WebClientFabric.create(1, 1,
+    var webClient = WebClientFabric.create(1, 1,
         String.format("http://localhost:%d", server.getPort()));
     weatherBitForecastApiClient = new WeatherBitForecastApiClient("test_key", MAX_ATTEMPTS, 0,
         webClient);
@@ -54,9 +52,8 @@ class WeatherBitForecastApiClientTest {
     void clientFetchesForecastsRequestAsExpected() throws InterruptedException {
       server.enqueue(createRequest());
       setUpMockLocation("Pissouri", "Cyprus", null, null);
-
-      JsonNode actualJsonNode = weatherBitForecastApiClient.fetchForecasts(mockLocation);
-      RecordedRequest actualRequest = server.takeRequest();
+      var actualJsonNode = weatherBitForecastApiClient.fetchForecasts(mockLocation);
+      var actualRequest = server.takeRequest();
 
       assertThat(actualRequest).returns("GET", from(RecordedRequest::getMethod))
           .returns("/?key=test_key&lang=en&units=M&days=16&city=Pissouri&country=Cyprus",
@@ -83,7 +80,7 @@ class WeatherBitForecastApiClientTest {
       server.enqueue(createRequest());
       setUpMockLocation("Pissouri", "Cyprus", null, null);
       weatherBitForecastApiClient.fetchForecasts(mockLocation);
-      RecordedRequest actualRequest = server.takeRequest();
+      var actualRequest = server.takeRequest();
 
       assertThat(actualRequest).returns(
           "/?key=test_key&lang=en&units=M&days=16&city=Pissouri&country=Cyprus",
@@ -96,7 +93,7 @@ class WeatherBitForecastApiClientTest {
       server.enqueue(createRequest());
       setUpMockLocation("Gotham", null, null, null);
       weatherBitForecastApiClient.fetchForecasts(mockLocation);
-      RecordedRequest actualRequest = server.takeRequest();
+      var actualRequest = server.takeRequest();
 
       assertThat(actualRequest).returns("/?key=test_key&lang=en&units=M&days=16&city=Gotham",
           from(RecordedRequest::getPath));
@@ -108,7 +105,7 @@ class WeatherBitForecastApiClientTest {
       server.enqueue(createRequest());
       setUpMockLocation(null, null, 1.0, 2.0);
       weatherBitForecastApiClient.fetchForecasts(mockLocation);
-      RecordedRequest actualRequest = server.takeRequest();
+      var actualRequest = server.takeRequest();
 
       assertThat(actualRequest).returns("/?key=test_key&lang=en&units=M&days=16&lat=2.0&lon=1.0",
           from(RecordedRequest::getPath));
@@ -120,7 +117,7 @@ class WeatherBitForecastApiClientTest {
       server.enqueue(createRequest());
       setUpMockLocation("City17", null, 1.0, 2.0);
       weatherBitForecastApiClient.fetchForecasts(mockLocation);
-      RecordedRequest actualRequest = server.takeRequest();
+      var actualRequest = server.takeRequest();
 
       assertThat(actualRequest).returns("/?key=test_key&lang=en&units=M&days=16&lat=2.0&lon=1.0",
           from(RecordedRequest::getPath));
@@ -134,15 +131,11 @@ class WeatherBitForecastApiClientTest {
     @DisplayName("Client should throws WeatherBitForecastApiClientException after first try")
     void clientShouldThrowClientException() {
       server.enqueue(new MockResponse().setResponseCode(HttpStatus.BAD_REQUEST.value()));
-      /*int requestCountBeforeTest = server.getRequestCount();
-      Location mockLocation = mock(Location.class);
-      setUpMockLocation(mockLocation,"Pissouri", "Cyprus", null, null);
-*/
       setUpMockLocation("Pissouri", "Cyprus", null, null);
 
       assertThatExceptionOfType(WeatherBitForecastApiClientException.class).isThrownBy(
           () -> weatherBitForecastApiClient.fetchForecasts(mockLocation));
-      assertThat(server.getRequestCount() /*- requestCountBeforeTest*/).isEqualTo(1);
+      assertThat(server.getRequestCount()).isEqualTo(1);
     }
 
     @Test
@@ -152,14 +145,11 @@ class WeatherBitForecastApiClientTest {
       server.enqueue(new MockResponse().setResponseCode(HttpStatus.SERVICE_UNAVAILABLE.value()));
       server.enqueue(new MockResponse().setResponseCode(HttpStatus.SERVICE_UNAVAILABLE.value()));
       server.enqueue(new MockResponse().setResponseCode(HttpStatus.SERVICE_UNAVAILABLE.value()));
-//      int requestCountBeforeTest = server.getRequestCount();
-      /*Location mockLocation = mock(Location.class);
-      setUpMockLocation(mockLocation,"Pissouri", "Cyprus", null, null);*/
       setUpMockLocation("Pissouri", "Cyprus", null, null);
 
       assertThatExceptionOfType(CustomRetryExhaustedException.class).isThrownBy(
           () -> weatherBitForecastApiClient.fetchForecasts(mockLocation));
-      assertThat(server.getRequestCount() /*- requestCountBeforeTest*/).isEqualTo(4);
+      assertThat(server.getRequestCount()).isEqualTo(4);
     }
   }
 
