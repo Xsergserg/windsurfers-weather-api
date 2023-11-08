@@ -1,13 +1,14 @@
 package windsurfersweatherapi.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
  * Simple class contains longitude and latitude values.
  */
-@Data
-public class Coordinates {
+@JsonSerialize
+public record Coordinates(
+    Double longitude,
+    Double latitude
+) {
 
-  final Double longitude;
-  final Double latitude;
 }

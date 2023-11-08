@@ -1,14 +1,12 @@
 package windsurfersweatherapi.model;
 
-import lombok.Data;
-
 /**
  * Class contains location data.
  */
-@Data
-public class LocationData {
+public record LocationData(
+    String city,
+    String countryCode,
+    Coordinates coordinates
+) {
 
-  final String city;
-  final String countryCode;
-  final Coordinates coordinates;
 }

@@ -1,13 +1,14 @@
 package windsurfersweatherapi.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
  * Class contains weather data.
  */
-@Data
-public class WeatherData {
+@JsonSerialize
+public record WeatherData(
+    Double averageTemperature,
+    Double averageWindSpeed
+) {
 
-  final Double averageTemperature;
-  final Double averageWindSpeed;
 }
