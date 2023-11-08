@@ -30,8 +30,8 @@ public class WeatherBitForecastResponseMapper {
       return emptyList();
     }
     try {
-      LocationData locationData = parseLocationFromJsonNode(jsonNode);
-      ArrayNode dataNode = (ArrayNode) jsonNode.get("data");
+      var locationData = parseLocationFromJsonNode(jsonNode);
+      var dataNode = (ArrayNode) jsonNode.get("data");
       return StreamSupport.stream(dataNode.spliterator(), true)
           .map(node -> parseDailyForecast(locationData, node))
           .collect(Collectors.toList());
