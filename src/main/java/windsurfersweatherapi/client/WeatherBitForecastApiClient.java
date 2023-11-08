@@ -3,7 +3,7 @@ package windsurfersweatherapi.client;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.time.Duration;
 import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ import windsurfersweatherapi.exception.WeatherBitForecastApiServerException;
 /**
  * Client for interaction with <a href="https://www.weatherbit.io/">https://www.weatherbit.io/</a>.
  */
-@Log4j2
+@Slf4j
 @AllArgsConstructor
 @Component
 public class WeatherBitForecastApiClient {
@@ -32,13 +32,13 @@ public class WeatherBitForecastApiClient {
   private int maxAttempts;
   @Value("${retryDelayInSeconds:3}")
   private int retryDelayInSeconds;
-  static final String DAYS = "16";
-  static final String UNITS = "M";
-  static final String LANG = "en";
-  static final String CITY = "city";
-  static final String COUNTRY = "country";
-  static final String LAT = "lat";
-  static final String LON = "lon";
+  private static final String DAYS = "16";
+  private static final String UNITS = "M";
+  private static final String LANG = "en";
+  private static final String CITY = "city";
+  private static final String COUNTRY = "country";
+  private static final String LAT = "lat";
+  private static final String LON = "lon";
   private final WebClient webClient;
 
   @Autowired
@@ -51,7 +51,7 @@ public class WeatherBitForecastApiClient {
    * specified location.
    *
    * @param location - Location enum
-   * @return JsonNode for correct location or null in case of null respond and not error status code
+   * @return JsonNode for correct location or null in case of null respond
    */
   public JsonNode fetchForecasts(Location location) {
     JsonNode weatherBitForecastResponse = webClient.get()
@@ -78,8 +78,8 @@ public class WeatherBitForecastApiClient {
   private MultiValueMap<String, String> getParamsMap(Location location) {
     MultiValueMap<String, String> params = getCommonParams();
     if (location.getCoordinates() != null) {
-      params.add(LAT, location.getCoordinates().getLatitude().toString());
-      params.add(LON, location.getCoordinates().getLongitude().toString());
+      params.add(LAT, location.getCoordinates().latitude().toString());
+      params.add(LON, location.getCoordinates().longitude().toString());
     } else if (location.getCity() != null) {
       params.add(CITY, location.getCity());
       if (location.getCountry() != null) {
