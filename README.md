@@ -53,13 +53,15 @@ Weather forecast service. Service accepts date as an argument, fetches forecast 
 
 `APP_WEATHERBIT_URL` -> URL to external WeatherBitApi service, default is `https://api.weatherbit.io/v2.0/forecast/daily`
 
-`APP_WEATHERBIT_CONNECTION_TIMEOUT_IN_SECONDS` -> Time period within which a connection between a client and a server must be established, default is `10` seconds
+`APP_WEATHERBIT_CONNECTION_TIMEOUT_SECONDS` -> Time period within which a connection between a client and a server must be established, default is `10` seconds
 
-`MAXIMUM_RETRIES=3` -> Amount of connection retries in cases of WeatherBitApi server errors, default is `3`
+`APP_WEATHERBIT_MAXIMUM_RETRIES=3` -> Amount of connection retries in cases of WeatherBitApi server errors, default is `3`
 
-`RESPONSE_TIMEOUT_IN_SECONDS=10` -> Time period before connection with WeatherBitApi will be closed, default is `10` seconds
+`APP_WEATHERBIT_RESPONSE_TIMEOUT_SECONDS=10` -> Time period before connection with WeatherBitApi will be closed, default is `10` seconds
 
 `ACTUATOR_ENDPOINTS` -> Active actuator endpoints, default is `metrics, health, info`
+
+`APP_WEATHERBIT_CACHE_TTL_SECONDS` -> https://api.weatherbit.io/v2.0/forecast/daily cache time to live, default is `180` seconds
 
 ### Variables using:
 

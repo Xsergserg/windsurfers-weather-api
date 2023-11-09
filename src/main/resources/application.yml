@@ -13,9 +13,10 @@ app:
   weatherbit:
     api_key: ${APP_WEATHERBIT_API_KEY:REPLACE_WITH_YOUR_KEY}
     url: ${APP_WEATHERBIT_URL:https://api.weatherbit.io/v2.0/forecast/daily}
-    connection_timeout_in_seconds: ${APP_WEATHERBIT_CONNECTION_TIMEOUT_IN_SECONDS:10}
-    maximum_retries: ${MAXIMUM_RETRIES:3}
-    response_timeout_in_seconds: ${RESPONSE_TIMEOUT_IN_SECONDS:10}
+    connection_timeout_seconds: ${APP_WEATHERBIT_CONNECTION_TIMEOUT_SECONDS:10}
+    maximum_retries: ${APP_WEATHERBIT_MAXIMUM_RETRIES:3}
+    response_timeout_seconds: ${APP_WEATHERBIT_RESPONSE_TIMEOUT_SECONDS:10}
+    cache_ttl_seconds: ${APP_WEATHERBIT_CACHE_TTL_SECONDS:180}
 
 management:
  endpoints:

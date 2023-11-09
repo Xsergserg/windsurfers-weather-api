@@ -21,6 +21,7 @@
     <!--  3rd part dependencies-->
     <lombok.version>1.18.30</lombok.version>
     <springfox.version>3.0.0</springfox.version>
+    <caffeine.version>3.1.8</caffeine.version>
     <!--  Test dependencies-->
     <reactor-test.version>3.4.32</reactor-test.version>
     <assertj-core.version>3.22.0</assertj-core.version>
@@ -72,6 +73,11 @@
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger-ui</artifactId>
       <version>${springfox.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
+      <version>${caffeine.version}</version>
     </dependency>
     <!--  Test dependencies-->
     <dependency>

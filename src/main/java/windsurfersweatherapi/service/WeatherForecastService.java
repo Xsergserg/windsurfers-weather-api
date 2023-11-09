@@ -1,10 +1,16 @@
 package windsurfersweatherapi.service;
 
+import static java.util.Collections.emptyList;
+
+import com.github.benmanes.caffeine.cache.Cache;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import windsurfersweatherapi.client.WeatherBitForecastApiClient;
@@ -26,6 +32,7 @@ public class WeatherForecastService {
   private final WeatherBitForecastResponseMapper mapper;
   private final WeatherBitForecastApiClient weatherBitForecastApiClient;
   private final WeatherForecastServiceValidator validator;
+  private final Cache<LocalDate, List<WeatherForecast>> cache;
 
   /**
    * Constructor.
@@ -37,10 +44,12 @@ public class WeatherForecastService {
   @Autowired
   public WeatherForecastService(WeatherBitForecastResponseMapper mapper,
       WeatherBitForecastApiClient weatherBitForecastApiClient,
-      WeatherForecastServiceValidator validator) {
+      WeatherForecastServiceValidator validator,
+      Cache<LocalDate, List<WeatherForecast>> cache) {
     this.mapper = mapper;
     this.weatherBitForecastApiClient = weatherBitForecastApiClient;
     this.validator = validator;
+    this.cache = cache;
   }
 
   /**
@@ -51,6 +60,24 @@ public class WeatherForecastService {
    */
   public WeatherForecast getBestWindsurfersForecast(LocalDate date) {
     validator.validateDate(date);
+    checkCache(date);
+    return cache.get(date, key -> emptyList())
+        .stream()
+        .filter(forecast ->
+            isSuitableWindSpeed(forecast.weatherData().averageWindSpeed())
+                && isSuitableTemp(forecast.weatherData().averageTemperature())
+        )
+        .max(Comparator.comparing(this::calculateForecastRate))
+        .orElse(null);
+  }
+
+  private void checkCache(LocalDate date) {
+    if (!cache.asMap().containsKey(date)) {
+      cache.putAll(fetchForecasts());
+    }
+  }
+
+  private Map<LocalDate, List<WeatherForecast>> fetchForecasts() {
     return Arrays.stream(Location.values()).parallel()
         .map(
             node -> mapper.convertToWeatherForecasts(
@@ -58,15 +85,7 @@ public class WeatherForecastService {
         .filter(Objects::nonNull)
         .flatMap(Collection::stream)
         .peek(validator::validateForecast)
-        .filter(forecast -> {
-          Double averageWindSpeed = forecast.weatherData().averageWindSpeed();
-          Double averageTemp = forecast.weatherData().averageTemperature();
-          return forecast.date().equals(date)
-              && isSuitableWindSpeed(averageWindSpeed)
-              && isSuitableTemp(averageTemp);
-        })
-        .max(Comparator.comparing(this::calculateForecastRate))
-        .orElse(null);
+        .collect(Collectors.groupingBy(WeatherForecast::date));
   }
 
   private Double calculateForecastRate(WeatherForecast forecast) {
