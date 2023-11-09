@@ -2,18 +2,27 @@ package windsurfersweatherapi.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static windsurfersweatherapi.factory.WeatherBitForecastResponseFactory.pissouriWeatherBitForecastFullResponse;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.benmanes.caffeine.cache.Caffeine;
 import java.time.Clock;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import windsurfersweatherapi.client.WeatherBitForecastApiClient;
+import windsurfersweatherapi.enums.Location;
 import windsurfersweatherapi.mapper.WeatherBitForecastResponseMapper;
 import windsurfersweatherapi.model.WeatherForecast;
 import windsurfersweatherapi.service.validator.WeatherForecastServiceValidator;
@@ -21,8 +30,9 @@ import windsurfersweatherapi.service.validator.WeatherForecastServiceValidator;
 @ExtendWith(MockitoExtension.class)
 class WeatherForecastServiceTest {
 
-  @Mock
-  private WeatherBitForecastResponseMapper mapper;
+  @Spy
+  private final WeatherBitForecastResponseMapper mapper = new WeatherBitForecastResponseMapper();
+
   @Mock
   private WeatherBitForecastApiClient weatherBitForecastApiClient;
 
@@ -34,13 +44,17 @@ class WeatherForecastServiceTest {
         mapper,
         weatherBitForecastApiClient,
         new WeatherForecastServiceValidator(
-            Clock.systemUTC())
+            Clock.systemUTC()),
+        Caffeine
+            .newBuilder()
+            .expireAfterWrite(100, TimeUnit.SECONDS)
+            .build()
     );
   }
 
   @Test
   @DisplayName("Service returns correct value")
-  void ServiceReturnsCorrectValue() {
+  void shouldReturnCorrectValue() {
     var actualDate = LocalDate.of(2023, 11, 11);
     var expected = createWeatherForecast(actualDate, "City17", 10.0, 10.0);
     when(weatherBitForecastApiClient.fetchForecasts(any())).thenReturn(null);
@@ -57,7 +71,7 @@ class WeatherForecastServiceTest {
 
   @Test
   @DisplayName("Service returns null if no suit weather forecast")
-  void ServiceReturnsNull() {
+  void shouldReturnNull() {
     var actualDate = LocalDate.of(2023, 11, 11);
     when(weatherBitForecastApiClient.fetchForecasts(any())).thenReturn(null);
     when(mapper.convertToWeatherForecasts(null)).thenReturn(
@@ -67,6 +81,28 @@ class WeatherForecastServiceTest {
         ));
 
     assertThat(service.getBestWindsurfersForecast(actualDate)).isNull();
+  }
+
+  @Test
+  @DisplayName("Cache is working as expected")
+  void shouldReturnCorrectCachedValue() throws JsonProcessingException {
+    ObjectMapper objectMapper = new ObjectMapper();
+    var actualDate = LocalDate.of(2023, 11, 15);
+    var expected = WeatherForecast.create(
+        actualDate,
+        "Pissouri",
+        "CY",
+        32.70132,
+        34.66942,
+        15.3,
+        9.4
+    );
+    when(weatherBitForecastApiClient.fetchForecasts(any())).thenReturn(objectMapper.readTree(
+        pissouriWeatherBitForecastFullResponse));
+    service.getBestWindsurfersForecast(actualDate);
+
+    assertThat(service.getBestWindsurfersForecast(actualDate)).isEqualTo(expected);
+    verify(weatherBitForecastApiClient, times(Location.values().length)).fetchForecasts(any());
   }
 
   private WeatherForecast createWeatherForecast(LocalDate date, String city, Double avgTemp,
