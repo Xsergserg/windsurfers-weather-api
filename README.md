@@ -79,7 +79,7 @@ Variables can be configured directly in `src/main/resources/application.yml`. Do
 
 Variables can be configured directly in `Dockerfile` in block ENV, f.e.:
 
-`ENVSERVER_PORT=8080`
+`ENV SERVER_PORT=8080`
 
 or
 
