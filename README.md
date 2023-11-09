@@ -14,4 +14,36 @@ Weather forecast service. Service accepts date as an argument, fetches forecast 
 
 ## Build
 #### local build:
+`mvn clean package -DskipTests`
+
+`java -jar -DAPP_WEATHERBIT_API_KEY=REPLACE_WITH_YOUR_KEY ./target/windsurfers-weather-api-1.0.jar`
+
+#### docker build:
+
+`docker build -t windsurfers-weather-api .`
+
+`docker run -dp 8080:8080 --env APP_WEATHERBIT_API_KEY=REPLACE_WITH_YOUR_KEY windsurfers-weather-api`
+
+#### Environmental variables:
+
+##### required:
+
+`APP_WEATHERBIT_API_KEY` -> api-key for https://api.weatherbit.io
+
+##### Optional(=default_value):
+
+`SERVER_PORT=8080` ->
+
+`SERVER_SERVLET_CONTEXT_PATH=/api` ->
+
+`LOGGING_LEVEL_ROOT=INFO` ->
+
+`APP_WEATHERBIT_URL=https://api.weatherbit.io/v2.0/forecast/daily` ->
+
+`APP_WEATHERBIT_CONNECTION_TIMEOUT_IN_SECONDS=10` ->
+
+`MAXIMUM_RETRIES=3` ->
+
+`RESPONSE_TIMEOUT_IN_SECONDS=10` -> 
+
 
