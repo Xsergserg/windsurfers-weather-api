@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.assertj.core.api.Assertions.from;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static windsurfersweatherapi.factory.WeatherBitForecastResponseFactory.pissouriWeatherBitForecastFullResponse;
 
 import java.io.IOException;
 import okhttp3.mockwebserver.MockResponse;
@@ -19,7 +20,6 @@ import org.springframework.http.HttpStatus;
 import windsurfersweatherapi.enums.Location;
 import windsurfersweatherapi.exception.CustomRetryExhaustedException;
 import windsurfersweatherapi.exception.WeatherBitForecastApiClientException;
-import windsurfersweatherapi.factory.WeatherBitForecastResponseFactory;
 import windsurfersweatherapi.model.Coordinates;
 
 class WeatherBitForecastApiClientTest {
@@ -165,8 +165,7 @@ class WeatherBitForecastApiClientTest {
   }
 
   private MockResponse createRequest() {
-    return new MockResponse().setBody(
-            WeatherBitForecastResponseFactory.pissouriWeatherBitForecastFullResponse())
+    return new MockResponse().setBody(pissouriWeatherBitForecastFullResponse)
         .addHeader("Content-Type", "application/json");
   }
 }
