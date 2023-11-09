@@ -1,13 +1,29 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
   servlet:
-    context-path: /api
+    context-path: ${SERVER_SERVLET_CONTEXT_PATH:/api}
 
 logging:
   level:
-    root: INFO
+    root: ${LOGGING_LEVEL_ROOT:INFO}
+  file:
+    path: ${LOGGING_FILE_PATH:logs/}
 
 app:
   weatherbit:
-    api_key: REPLACE_WITH_YOUR_KEY
-    url: https://api.weatherbit.io/v2.0/forecast/daily
+    api_key: ${APP_WEATHERBIT_API_KEY:REPLACE_WITH_YOUR_KEY}
+    url: ${APP_WEATHERBIT_URL:https://api.weatherbit.io/v2.0/forecast/daily}
+    connection_timeout_in_seconds: ${APP_WEATHERBIT_CONNECTION_TIMEOUT_IN_SECONDS:10}
+    maximum_retries: ${MAXIMUM_RETRIES:3}
+    response_timeout_in_seconds: ${RESPONSE_TIMEOUT_IN_SECONDS:10}
+
+management:
+ endpoints:
+   web:
+     exposure:
+       include: ${ACTUATOR_ENDPOINTS:metrics, health, info}
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
