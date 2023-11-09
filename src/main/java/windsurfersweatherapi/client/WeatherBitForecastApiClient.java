@@ -28,7 +28,7 @@ public class WeatherBitForecastApiClient {
 
   @Value("${app.weatherbit.api_key}")
   private String apiKey;
-  @Value("${app.weatherbit.maximumRetries:3}")
+  @Value("${app.weatherbit.maximum_retries}")
   private int maxAttempts;
   @Value("${retryDelayInSeconds:3}")
   private int retryDelayInSeconds;
