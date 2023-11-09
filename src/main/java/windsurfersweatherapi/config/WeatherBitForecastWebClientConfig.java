@@ -16,9 +16,9 @@ public class WeatherBitForecastWebClientConfig {
 
   @Value("${app.weatherbit.url}")
   private String weatherBitForecastUrl;
-  @Value("${app.weatherbit.connection_timeout_in_seconds}")
+  @Value("${app.weatherbit.connection_timeout_seconds}")
   private int connectionTimeoutInSeconds;
-  @Value("${app.weatherbit.response_timeout_in_seconds}")
+  @Value("${app.weatherbit.response_timeout_seconds}")
   private int responseTimeoutInSeconds;
 
   @Bean

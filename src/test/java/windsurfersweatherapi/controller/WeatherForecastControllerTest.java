@@ -33,6 +33,7 @@ import windsurfersweatherapi.service.WeatherForecastService;
 
 public class WeatherForecastControllerTest {
 
+  @Disabled
   @Nested
   @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
   class Integration {
@@ -47,7 +48,6 @@ public class WeatherForecastControllerTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    @Disabled
     @DisplayName("Real integration test return status 200")
     void shouldReturn200() {
       assertThat(this.restTemplate.getForEntity("http://localhost:" + port + contextPath +

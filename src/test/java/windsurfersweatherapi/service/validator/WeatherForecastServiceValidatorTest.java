@@ -3,12 +3,10 @@ package windsurfersweatherapi.service.validator;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.assertj.core.api.Assertions.assertThatNoException;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.reset;
 
 import java.time.Clock;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
