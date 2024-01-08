@@ -12,7 +12,7 @@ Weather forecast service. Service accepts date as an argument, fetches forecast 
 
 ### SwaggerUI:
 
-`http://localhost:8080/api/swagger-ui`
+`http://localhost:8080/api/swagger-ui/`
 
 ### Actuator:
 
