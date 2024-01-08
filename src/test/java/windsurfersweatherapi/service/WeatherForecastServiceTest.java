@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import java.time.Clock;
 import java.time.LocalDate;
+import java.time.ZoneOffset;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,7 +45,9 @@ class WeatherForecastServiceTest {
         mapper,
         weatherBitForecastApiClient,
         new WeatherForecastServiceValidator(
-            Clock.systemUTC()),
+            Clock.fixed(
+                LocalDate.of(2023, 11, 5).atStartOfDay().toInstant(ZoneOffset.UTC),
+                ZoneOffset.UTC)),
         Caffeine
             .newBuilder()
             .expireAfterWrite(100, TimeUnit.SECONDS)
